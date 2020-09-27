@@ -174,13 +174,16 @@
   color: green;
 }
 
+.red{
+  color: red;
+}
+
 .countryButton{
   font-size: 1em;
   margin: 5px;
   border-radius: 10px;
   background-color: #FDF9F3;
   border: none;
-  
   font-family: 'Fraunces 72pt S100';
 }
 

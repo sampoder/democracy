@@ -32,7 +32,7 @@ export default function Home(props) {
           the two.
           <br />
           <br />
-          Read on for a summary, or jump straight to the data.
+          Read on for a summary, or <a href="#data" style={{ textDecoration: 'underline'}}>jump straight to the data</a>.
         </p>
         <div className={styles.grid}>
           <div className={styles.card}>
@@ -51,7 +51,8 @@ export default function Home(props) {
           </div>
           <div className={styles.cardFull + " " + styles.card}>
             <h1>
-              "It is clear that there is a growing deficit of trust between
+              "It is clear that there is a growing{" "}
+              <span className={styles.red}>deficit of trust</span> between
               people and political establishments, and rising threats to the
               social contract."
             </h1>
@@ -59,7 +60,10 @@ export default function Home(props) {
           </div>
           <div className={styles.card}>
             <h1>🇧🇫🇧🇯🇰🇲🇿🇲🇲🇱</h1>
-            <h1>Sub-Saharan Africa reverses progress.</h1>
+            <h1>
+              Sub-Saharan Africa <span className={styles.red}>reverse</span>{" "}
+              progress.
+            </h1>
             <p>
               With widespread public dissatisfaction, the region's decade of
               rocky progress was reversed with it's regional score now at{" "}
@@ -68,7 +72,10 @@ export default function Home(props) {
           </div>
           <div className={styles.card}>
             <h1>🇧🇴🇬🇾🇬🇹🇭🇹🇻🇪</h1>
-            <h1>Latin America continues to fall.</h1>
+            <h1>
+              Latin America continues to{" "}
+              <span className={styles.red}>fall</span>.
+            </h1>
             <p>
               With restrictions placed on political activity and major fraud
               around the region it's score continues to drop and is now{" "}
@@ -77,7 +84,10 @@ export default function Home(props) {
           </div>
 
           <div className={styles.cardFull + " " + styles.card}>
-            <h1>The Greatest Drop: 🇨🇳 China (PRC)</h1>
+            <h1>
+              The Greatest <span className={styles.red}>Drop:</span> 🇨🇳 China
+              (PRC)
+            </h1>
             <p>
               With growing surveillance of the population and increased
               discrimination against minorities led to China's score dropping by{" "}
@@ -111,7 +121,7 @@ export default function Home(props) {
           </div>
           <div className={styles.cardFull + " " + styles.card}>
             <h1>
-              The Most <span className={styles.green}>Gains:</span> 🇹🇭
+              The Largest <span className={styles.green}>Gain:</span> 🇹🇭
               Thailand
             </h1>
             <p>
@@ -122,10 +132,22 @@ export default function Home(props) {
           </div>
         </div>
 
-        <h1 style={{ textAlign: "left", width: "100%", fontSize: "3em" }}>
-          Explore the data
+        <h1 style={{ textAlign: "center", width: "100%", fontSize: "3em" }} id='data'>
+          <span className={styles.titleUnderline} style={{ padding: "10px" }}>
+            Explore the data
+          </span>
         </h1>
         <div className={styles.grid}>
+          <div className={styles.card}>
+            <h1>🗳🗳🗳</h1>
+            <h1>Top 30</h1>
+            <p>Leading the way towards freedom.</p>
+          </div>
+          <div className={styles.card}>
+            <h1>🙅🏻‍♀️🙅🏽‍♀️🙅🏿‍♀️</h1>
+            <h1>Bottom 30</h1>
+            <p>Still have a long way to go.</p>
+          </div>
           <div className={styles.card}>
             <h1>🌏🌎🌍</h1>
             <h1>Every country</h1>
@@ -160,7 +182,9 @@ export default function Home(props) {
           </div>
           <div className={styles.card}>
             <h1>🇮🇱🇯🇴🇶🇦🇧🇭🇸🇾</h1>
-            <h1 style={{ fontSize: "1.6em" }}>Middle East <span className={styles.and}>&</span> North Africa</h1>
+            <h1 style={{ fontSize: "1.6em" }}>
+              Middle East <span className={styles.and}>&</span> North Africa
+            </h1>
             <p>
               Averages <strong>3.53</strong> overall.
             </p>
