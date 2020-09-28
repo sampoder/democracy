@@ -1912,6 +1912,11 @@ core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
+country-emoji@^1.5.4:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/country-emoji/-/country-emoji-1.5.4.tgz#51501258ec8c1326495a49370e45d64175f9d29d"
+  integrity sha512-zIuXbj+2HLBuCGEhDwVdRisigzkYxn8X0qlDCAuKghUsa0S4cmJswbx7pY8E38ecSdkaIxTbH2B6x8DHKG2D6Q==
+
 create-ecdh@^4.0.0:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/create-ecdh/-/create-ecdh-4.0.4.tgz#d6e7f4bffa66736085a0762fd3a632684dabcc4e"
@@ -3892,6 +3897,11 @@ randomfill@^1.0.3:
   dependencies:
     randombytes "^2.0.5"
     safe-buffer "^5.1.0"
+
+react-country-flag@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/react-country-flag/-/react-country-flag-2.3.0.tgz#dd78906551fdc231f9e02084e87f9a62f8ea6d7b"
+  integrity sha512-Lb2nhMoTOxNjlQoun3iPwqIgpluSyzr8jN45cN0mXYbeDi10/MhGJKZa1cvgyrnfCtOh/IHdhA0MkSuls78bBw==
 
 react-dom@16.13.1:
   version "16.13.1"
