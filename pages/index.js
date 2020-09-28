@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { orderBy } from "lodash";
-const { flag, code, name, countries } = require("country-emoji");
+import { flag, code, name, countries } from  "country-emoji"
 import ReactCountryFlag from "react-country-flag";
 
 export default function Home(props) {
