@@ -3,8 +3,10 @@ import styles from "../styles/Home.module.css";
 import { orderBy } from "lodash";
 import { flag, code, name, countries } from "country-emoji";
 import ReactCountryFlag from "react-country-flag";
+import * as rdd from "react-device-detect";
 
 export default function Home(props) {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -68,35 +70,35 @@ export default function Home(props) {
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇲🇺")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇳🇦")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇺🇬")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇧🇫")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇨🇩")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
@@ -116,35 +118,35 @@ export default function Home(props) {
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇺🇾")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇦🇷")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇧🇷")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇲🇽")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇨🇺")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
@@ -166,7 +168,7 @@ export default function Home(props) {
               The Greatest <span className={styles.red}>Drop:</span>{" "}
               <ReactCountryFlag
                 countryCode={code("🇨🇳")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
@@ -185,7 +187,7 @@ export default function Home(props) {
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇨🇱")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
@@ -195,7 +197,7 @@ export default function Home(props) {
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇫🇷")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
@@ -205,7 +207,7 @@ export default function Home(props) {
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇵🇹")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
@@ -222,35 +224,35 @@ export default function Home(props) {
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇳🇴")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇮🇸")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇸🇪")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇫🇮")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇩🇰")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
@@ -270,7 +272,7 @@ export default function Home(props) {
               The Largest <span className={styles.green}>Gain:</span>{" "}
               <ReactCountryFlag
                 countryCode={code("🇹🇭")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
@@ -315,35 +317,35 @@ export default function Home(props) {
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇳🇿")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇰🇷")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇸🇬")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇰🇭")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇨🇳")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
@@ -360,35 +362,35 @@ export default function Home(props) {
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇪🇪")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇧🇬")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇲🇰")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇷🇺")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇹🇲")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
@@ -405,35 +407,35 @@ export default function Home(props) {
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇺🇾")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇦🇷")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇧🇷")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇲🇽")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇨🇺")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
@@ -448,35 +450,35 @@ export default function Home(props) {
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇮🇱")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇯🇴")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇶🇦")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇧🇭")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇸🇾")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
@@ -493,14 +495,14 @@ export default function Home(props) {
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇨🇦")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇺🇸")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
@@ -515,35 +517,35 @@ export default function Home(props) {
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇲🇺")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇳🇦")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇺🇬")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇧🇫")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇨🇩")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
@@ -558,35 +560,35 @@ export default function Home(props) {
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇳🇴")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇮🇪")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇩🇪")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇲🇹")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
                 countryCode={code("🇹🇷")}
-                svg
+                svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
@@ -603,7 +605,7 @@ export default function Home(props) {
           {props.countries.map((country) => (
             <a href={"#"}>
               <button className={styles.countryButton}>
-                <ReactCountryFlag countryCode={country.emoji} svg />{" "}
+                <ReactCountryFlag countryCode={country.emoji} svg={rdd.isMacOs + rdd.isIOS13 < 1} />{" "}
                 {country.name}
               </button>
             </a>
