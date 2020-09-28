@@ -10,20 +10,19 @@ export default function Home(props) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Top 30 Nations - The State of Democracy</title>
+        <title>All Nations - The State of Democracy</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <article
         className={styles.header}
         style={{
-          backgroundImage:
-            `linear-gradient(0deg, rgba(100, 75, 37, 0.74), rgba(100, 75, 37, 0.74))
-            ,url("https://images.unsplash.com/photo-1561057160-ce83b1bd72f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80")`,
+          backgroundImage: `linear-gradient(0deg, rgba(100, 75, 37, 0.74), rgba(100, 75, 37, 0.74))
+            ,url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80")`,
         }}
       >
         <p className={styles.description}>The State of Democracy</p>
         <h1 className={styles.title}>
-          <span className={styles.titleUnderline}>Top 30 Nations</span>
+          <span className={styles.titleUnderline}>All Nations</span>
         </h1>
       </article>
 
@@ -91,7 +90,7 @@ export const getServerSideProps = async () => {
         colour: fields["Colour"],
       }))
     )
-    .then((countries) => orderBy(countries, "score", "desc").slice(0, 30));
+    .then((countries) => orderBy(countries, "score", "desc"));
   console.log(countries);
   return { props: { countries } };
 };

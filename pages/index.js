@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { orderBy } from "lodash";
 import { flag, code, name, countries } from "country-emoji";
@@ -6,7 +7,6 @@ import ReactCountryFlag from "react-country-flag";
 import * as rdd from "react-device-detect";
 
 export default function Home(props) {
-
   return (
     <div className={styles.container}>
       <Head>
@@ -105,7 +105,7 @@ export default function Home(props) {
               />
             </h1>
             <h1>
-              Sub-Saharan Africa <span className={styles.red}>reverse</span>{" "}
+              Sub-Saharan Africa <span className={styles.red}>reverses</span>{" "}
               progress.
             </h1>
             <p>
@@ -296,24 +296,25 @@ export default function Home(props) {
           </span>
         </h1>
         <div className={styles.grid}>
-          <div className={styles.card}>
+          <a href="/top-thirty" className={styles.card +' ' + styles.cardHover}>
             <h1>🗳🗳🗳</h1>
             <h1>Top 30</h1>
             <p>Leading the way towards freedom.</p>
-          </div>
-          <div className={styles.card}>
+          </a>
+
+          <a href="/lower-thirty" className={styles.card +' ' + styles.cardHover}>
             <h1>🙅🏻‍♀️🙅🏽‍♀️🙅🏿‍♀️</h1>
             <h1>Bottom 30</h1>
             <p>Still have a long way to go.</p>
-          </div>
-          <div className={styles.card}>
+          </a>
+          <a href="/all" className={styles.card +' ' + styles.cardHover}>
             <h1>🌏🌎🌍</h1>
             <h1>Every country</h1>
             <p>
               <i>(Not including microstates)</i>
             </p>
-          </div>
-          <div className={styles.card}>
+          </a>
+          <div className={styles.card +' ' + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇳🇿")}
@@ -358,7 +359,7 @@ export default function Home(props) {
               Averages <strong>5.67</strong> overall.
             </p>
           </div>
-          <div className={styles.card}>
+          <div className={styles.card +' ' + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇪🇪")}
@@ -403,7 +404,7 @@ export default function Home(props) {
               Averages <strong>5.42</strong> overall.
             </p>
           </div>
-          <div className={styles.card}>
+          <div className={styles.card +' ' + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇺🇾")}
@@ -446,7 +447,7 @@ export default function Home(props) {
               Averages <strong>6.13</strong> overall.
             </p>
           </div>
-          <div className={styles.card}>
+          <div className={styles.card +' ' + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇮🇱")}
@@ -491,7 +492,7 @@ export default function Home(props) {
               Averages <strong>3.53</strong> overall.
             </p>
           </div>
-          <div className={styles.card}>
+          <div className={styles.card +' ' + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇨🇦")}
@@ -513,7 +514,7 @@ export default function Home(props) {
               Averages <strong>8.59</strong> overall.
             </p>
           </div>
-          <div className={styles.card}>
+          <div className={styles.card +' ' + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇲🇺")}
@@ -556,7 +557,7 @@ export default function Home(props) {
               Averages <strong>4.26</strong> overall.
             </p>
           </div>
-          <div className={styles.card}>
+          <div className={styles.card +' ' + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇳🇴")}
@@ -605,7 +606,10 @@ export default function Home(props) {
           {props.countries.map((country) => (
             <a href={"#"}>
               <button className={styles.countryButton}>
-                <ReactCountryFlag countryCode={country.emoji} svg={rdd.isMacOs + rdd.isIOS13 < 1} />{" "}
+                <ReactCountryFlag
+                  countryCode={country.emoji}
+                  svg={rdd.isMacOs + rdd.isIOS13 < 1}
+                />{" "}
                 {country.name}
               </button>
             </a>

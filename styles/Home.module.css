@@ -54,6 +54,7 @@
 
 .titleUnderline{
   border-bottom: 6px solid currentColor;
+  text-transform: uppercase;
 }
 
 .title,
@@ -140,10 +141,13 @@
       rgba(100, 75, 37, 0.74),
       rgba(100, 75, 37, 0.74)
     ),
-    url("https://images.unsplash.com/photo-1590341279033-60c7dcd15db0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjUxNDAwfQ&auto=format&fit=crop&w=1650&q=80");
+    url("https://images.unsplash.com/photo-1567283280655-41ac70c3ce46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
   width: 100%;
+  background-size: cover;
   padding: 80px 0 100px;
   color: #eaeaea;
+  background-attachment: fixed;
+  background-position: bottom; 
 }
 
 .bigNumber{
@@ -190,4 +194,8 @@
 .countryButton:hover{
   background-color: #ebc997;
   cursor: pointer;
+}
+
+.cardHover:hover{
+  background-color: #ebc997;
 }

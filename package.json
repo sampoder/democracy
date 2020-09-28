@@ -12,6 +12,7 @@
     "lodash": "^4.17.20",
     "next": "9.5.3",
     "react": "16.13.1",
+    "react-circular-progressbar": "^2.0.3",
     "react-country-flag": "^2.3.0",
     "react-device-detect": "^1.13.1",
     "react-dom": "16.13.1"
