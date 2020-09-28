@@ -20,7 +20,7 @@ export default function Home(props) {
             ,url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80")`,
         }}
       >
-        <p className={styles.description}>The State of Democracy</p>
+        <p className={styles.description}><a href="/" style={{ textDecoration: 'none' }}>The State of Democracy</a></p>
         <h1 className={styles.title}>
           <span className={styles.titleUnderline}>All Nations</span>
         </h1>

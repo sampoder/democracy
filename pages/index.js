@@ -296,25 +296,31 @@ export default function Home(props) {
           </span>
         </h1>
         <div className={styles.grid}>
-          <a href="/top-thirty" className={styles.card +' ' + styles.cardHover}>
+          <a
+            href="/top-thirty"
+            className={styles.card + " " + styles.cardHover}
+          >
             <h1>🗳🗳🗳</h1>
             <h1>Top 30</h1>
             <p>Leading the way towards freedom.</p>
           </a>
 
-          <a href="/lower-thirty" className={styles.card +' ' + styles.cardHover}>
+          <a
+            href="/lower-thirty"
+            className={styles.card + " " + styles.cardHover}
+          >
             <h1>🙅🏻‍♀️🙅🏽‍♀️🙅🏿‍♀️</h1>
             <h1>Bottom 30</h1>
             <p>Still have a long way to go.</p>
           </a>
-          <a href="/all" className={styles.card +' ' + styles.cardHover}>
+          <a href="/all" className={styles.card + " " + styles.cardHover}>
             <h1>🌏🌎🌍</h1>
             <h1>Every country</h1>
             <p>
               <i>(Not including microstates)</i>
             </p>
           </a>
-          <div className={styles.card +' ' + styles.cardHover}>
+          <a href="/asia-pacific" className={styles.card + " " + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇳🇿")}
@@ -352,14 +358,12 @@ export default function Home(props) {
                 }}
               />
             </h1>
-            <h1>
-              Asia <span className={styles.and}>&</span> Oceania
-            </h1>
+            <h1>Asia Pacific</h1>
             <p>
               Averages <strong>5.67</strong> overall.
             </p>
-          </div>
-          <div className={styles.card +' ' + styles.cardHover}>
+          </a>
+          <a href="/eastern-europe" className={styles.card + " " + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇪🇪")}
@@ -403,8 +407,8 @@ export default function Home(props) {
             <p>
               Averages <strong>5.42</strong> overall.
             </p>
-          </div>
-          <div className={styles.card +' ' + styles.cardHover}>
+          </a>
+          <a href="/latin-america" className={styles.card + " " + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇺🇾")}
@@ -446,8 +450,8 @@ export default function Home(props) {
             <p>
               Averages <strong>6.13</strong> overall.
             </p>
-          </div>
-          <div className={styles.card +' ' + styles.cardHover}>
+          </a>
+          <div className={styles.card + " " + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇮🇱")}
@@ -492,7 +496,7 @@ export default function Home(props) {
               Averages <strong>3.53</strong> overall.
             </p>
           </div>
-          <div className={styles.card +' ' + styles.cardHover}>
+          <a href="/north-america" className={styles.card + " " + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇨🇦")}
@@ -513,8 +517,8 @@ export default function Home(props) {
             <p>
               Averages <strong>8.59</strong> overall.
             </p>
-          </div>
-          <div className={styles.card +' ' + styles.cardHover}>
+          </a>
+          <a href="/sub-saharan-africa" className={styles.card + " " + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇲🇺")}
@@ -556,8 +560,8 @@ export default function Home(props) {
             <p>
               Averages <strong>4.26</strong> overall.
             </p>
-          </div>
-          <div className={styles.card +' ' + styles.cardHover}>
+          </a>
+          <a href="/western-europe" className={styles.card + " " + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇳🇴")}
@@ -599,7 +603,7 @@ export default function Home(props) {
             <p>
               Averages <strong>8.35</strong> overall.
             </p>
-          </div>
+          </a>
         </div>
 
         <p style={{ maxWidth: "800px", padding: "auto" }}>

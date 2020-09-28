@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { orderBy } from "lodash";
+import { orderBy, filter } from "lodash";
 import { flag, code, name, countries } from "country-emoji";
 import ReactCountryFlag from "react-country-flag";
 import * as rdd from "react-device-detect";
@@ -10,19 +10,19 @@ export default function Home(props) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Lowest 30 Nations - The State of Democracy</title>
+        <title>Sub-Saharan Africa - The State of Democracy</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <article
         className={styles.header}
         style={{
           backgroundImage: `linear-gradient(0deg, rgba(100, 75, 37, 0.74), rgba(100, 75, 37, 0.74))
-            ,url("https://static01.nyt.com/images/2019/05/01/world/01venezuela5-sub/01venezuela5-sub-facebookJumbo-v2.jpg")`,
+            ,url("https://media.npr.org/assets/img/2016/06/20/venezuela-june-20-16_wide-288b85ef48230d7e987f81fc7d7a06fc56d53f4b.jpg?s=1400")`,
         }}
       >
         <p className={styles.description}><a href="/" style={{ textDecoration: 'none' }}>The State of Democracy</a></p>
         <h1 className={styles.title}>
-          <span className={styles.titleUnderline}>Lowest 30 Nations</span>
+          <span className={styles.titleUnderline}>Sub-saharan Africa</span>
         </h1>
       </article>
 
@@ -88,10 +88,11 @@ export const getServerSideProps = async () => {
         score: fields["Overall"],
         rank: fields["Rank"],
         colour: fields["Colour"],
+        region: fields["Region"],
       }))
     )
-    .then((countries) => orderBy(countries, "score").slice(0, 30))
-    .then((countries) => orderBy(countries, "score", "desc"));
-  console.log(countries);
+    .then((countries) => orderBy(countries, "score", "desc"))
+    .then((countries) => filter(countries, country => country.region === 'Sub-Saharan Africa'));
+
   return { props: { countries } };
 };
