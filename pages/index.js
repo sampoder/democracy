@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { orderBy } from "lodash";
-import { flag, code, name, countries } from  "country-emoji"
+import { flag, code, name, countries } from "country-emoji";
 import ReactCountryFlag from "react-country-flag";
 
 export default function Home(props) {
@@ -66,11 +66,41 @@ export default function Home(props) {
           </div>
           <div className={styles.card}>
             <h1>
-              <ReactCountryFlag countryCode={code("🇲🇺")} svg />
-              <ReactCountryFlag countryCode={code("🇳🇦")} svg />
-              <ReactCountryFlag countryCode={code("🇺🇬")} svg />
-              <ReactCountryFlag countryCode={code("🇧🇫")} svg />
-              <ReactCountryFlag countryCode={code("🇨🇩")} svg />
+              <ReactCountryFlag
+                countryCode={code("🇲🇺")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇳🇦")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇺🇬")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇧🇫")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇨🇩")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
             </h1>
             <h1>
               Sub-Saharan Africa <span className={styles.red}>reverse</span>{" "}
@@ -84,11 +114,41 @@ export default function Home(props) {
           </div>
           <div className={styles.card}>
             <h1>
-              <ReactCountryFlag countryCode={code("🇺🇾")} svg />
-              <ReactCountryFlag countryCode={code("🇦🇷")} svg />
-              <ReactCountryFlag countryCode={code("🇧🇷")} svg />
-              <ReactCountryFlag countryCode={code("🇲🇽")} svg />
-              <ReactCountryFlag countryCode={code("🇨🇺")} svg />
+              <ReactCountryFlag
+                countryCode={code("🇺🇾")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇦🇷")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇧🇷")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇲🇽")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇨🇺")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
             </h1>
             <h1>
               Latin America continues to{" "}
@@ -103,8 +163,15 @@ export default function Home(props) {
 
           <div className={styles.cardFull + " " + styles.card}>
             <h1>
-              The Greatest <span className={styles.red}>Drop:</span> 🇨🇳 China
-              (PRC)
+              The Greatest <span className={styles.red}>Drop:</span>{" "}
+              <ReactCountryFlag
+                countryCode={code("🇨🇳")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />{" "}
+              China (PRC)
             </h1>
             <p>
               With growing surveillance of the population and increased
@@ -116,14 +183,34 @@ export default function Home(props) {
           </div>
           <div className={styles.card}>
             <h1>
-              <ReactCountryFlag countryCode={code("🇨🇱")} svg /> Chile,{" "}
+              <ReactCountryFlag
+                countryCode={code("🇨🇱")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />{" "}
+              Chile,{" "}
             </h1>
             <h1>
-              <ReactCountryFlag countryCode={code("🇫🇷")} svg /> France{" "}
-              <span className={styles.and}>&</span>
+              <ReactCountryFlag
+                countryCode={code("🇫🇷")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />{" "}
+              France <span className={styles.and}>&</span>
             </h1>
             <h1>
-              <ReactCountryFlag countryCode={code("🇵🇹")} svg /> Portugal
+              <ReactCountryFlag
+                countryCode={code("🇵🇹")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />{" "}
+              Portugal
             </h1>
             <h3>
               were upgraded to{" "}
@@ -133,11 +220,41 @@ export default function Home(props) {
 
           <div className={styles.card}>
             <h1>
-              <ReactCountryFlag countryCode={code("🇳🇴")} svg />
-              <ReactCountryFlag countryCode={code("🇮🇸")} svg />
-              <ReactCountryFlag countryCode={code("🇸🇪")} svg />
-              <ReactCountryFlag countryCode={code("🇫🇮")} svg />
-              <ReactCountryFlag countryCode={code("🇩🇰")} svg />
+              <ReactCountryFlag
+                countryCode={code("🇳🇴")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇮🇸")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇸🇪")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇫🇮")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇩🇰")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
             </h1>
             <h1>
               Nordic nations continue{" "}
@@ -150,7 +267,14 @@ export default function Home(props) {
           </div>
           <div className={styles.cardFull + " " + styles.card}>
             <h1>
-              The Largest <span className={styles.green}>Gain:</span> 🇹🇭
+              The Largest <span className={styles.green}>Gain:</span>{" "}
+              <ReactCountryFlag
+                countryCode={code("🇹🇭")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />{" "}
               Thailand
             </h1>
             <p>
@@ -189,11 +313,41 @@ export default function Home(props) {
           </div>
           <div className={styles.card}>
             <h1>
-              <ReactCountryFlag countryCode={code("🇳🇿")} svg />
-              <ReactCountryFlag countryCode={code("🇰🇷")} svg />
-              <ReactCountryFlag countryCode={code("🇸🇬")} svg />
-              <ReactCountryFlag countryCode={code("🇰🇭")} svg />
-              <ReactCountryFlag countryCode={code("🇨🇳")} svg />
+              <ReactCountryFlag
+                countryCode={code("🇳🇿")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇰🇷")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇸🇬")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇰🇭")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇨🇳")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
             </h1>
             <h1>
               Asia <span className={styles.and}>&</span> Oceania
@@ -204,11 +358,41 @@ export default function Home(props) {
           </div>
           <div className={styles.card}>
             <h1>
-              <ReactCountryFlag countryCode={code("🇪🇪")} svg />
-              <ReactCountryFlag countryCode={code("🇧🇬")} svg />
-              <ReactCountryFlag countryCode={code("🇲🇰")} svg />
-              <ReactCountryFlag countryCode={code("🇷🇺")} svg />
-              <ReactCountryFlag countryCode={code("🇹🇲")} svg />
+              <ReactCountryFlag
+                countryCode={code("🇪🇪")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇧🇬")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇲🇰")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇷🇺")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇹🇲")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
             </h1>
             <h1>
               Central <span className={styles.and}>&</span> East Europe
@@ -219,11 +403,41 @@ export default function Home(props) {
           </div>
           <div className={styles.card}>
             <h1>
-              <ReactCountryFlag countryCode={code("🇺🇾")} svg />
-              <ReactCountryFlag countryCode={code("🇦🇷")} svg />
-              <ReactCountryFlag countryCode={code("🇧🇷")} svg />
-              <ReactCountryFlag countryCode={code("🇲🇽")} svg />
-              <ReactCountryFlag countryCode={code("🇨🇺")} svg />
+              <ReactCountryFlag
+                countryCode={code("🇺🇾")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇦🇷")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇧🇷")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇲🇽")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇨🇺")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
             </h1>
             <h1>Latin America</h1>
             <p>
@@ -232,11 +446,41 @@ export default function Home(props) {
           </div>
           <div className={styles.card}>
             <h1>
-              <ReactCountryFlag countryCode={code("🇮🇱")} svg />
-              <ReactCountryFlag countryCode={code("🇯🇴")} svg />
-              <ReactCountryFlag countryCode={code("🇶🇦")} svg />
-              <ReactCountryFlag countryCode={code("🇧🇭")} svg />
-              <ReactCountryFlag countryCode={code("🇸🇾")} svg />
+              <ReactCountryFlag
+                countryCode={code("🇮🇱")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇯🇴")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇶🇦")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇧🇭")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇸🇾")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
             </h1>
             <h1 style={{ fontSize: "1.6em" }}>
               Middle East <span className={styles.and}>&</span> North Africa
@@ -247,8 +491,20 @@ export default function Home(props) {
           </div>
           <div className={styles.card}>
             <h1>
-              <ReactCountryFlag countryCode={code("🇨🇦")} svg />
-              <ReactCountryFlag countryCode={code("🇺🇸")} svg />
+              <ReactCountryFlag
+                countryCode={code("🇨🇦")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇺🇸")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
             </h1>
             <h1>North America</h1>
             <p>
@@ -257,11 +513,41 @@ export default function Home(props) {
           </div>
           <div className={styles.card}>
             <h1>
-              <ReactCountryFlag countryCode={code("🇲🇺")} svg />
-              <ReactCountryFlag countryCode={code("🇳🇦")} svg />
-              <ReactCountryFlag countryCode={code("🇺🇬")} svg />
-              <ReactCountryFlag countryCode={code("🇧🇫")} svg />
-              <ReactCountryFlag countryCode={code("🇨🇩")} svg />
+              <ReactCountryFlag
+                countryCode={code("🇲🇺")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇳🇦")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇺🇬")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇧🇫")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇨🇩")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
             </h1>
             <h1>Sub-Saharan Africa</h1>
             <p>
@@ -270,11 +556,41 @@ export default function Home(props) {
           </div>
           <div className={styles.card}>
             <h1>
-              <ReactCountryFlag countryCode={code("🇳🇴")} svg />
-              <ReactCountryFlag countryCode={code("🇮🇪")} svg />
-              <ReactCountryFlag countryCode={code("🇩🇪")} svg />
-              <ReactCountryFlag countryCode={code("🇲🇹")} svg />
-              <ReactCountryFlag countryCode={code("🇹🇷")} svg />
+              <ReactCountryFlag
+                countryCode={code("🇳🇴")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇮🇪")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇩🇪")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇲🇹")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
+              <ReactCountryFlag
+                countryCode={code("🇹🇷")}
+                svg
+                style={{
+                  marginLeft: "4px",
+                }}
+              />
             </h1>
             <h1>Western Europe</h1>
             <p>
@@ -287,7 +603,8 @@ export default function Home(props) {
           {props.countries.map((country) => (
             <a href={"#"}>
               <button className={styles.countryButton}>
-                <ReactCountryFlag countryCode={country.emoji} /> {country.name}
+                <ReactCountryFlag countryCode={country.emoji} svg />{" "}
+                {country.name}
               </button>
             </a>
           ))}
