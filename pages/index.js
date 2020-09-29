@@ -451,7 +451,7 @@ export default function Home(props) {
               Averages <strong>6.13</strong> overall.
             </p>
           </a>
-          <div className={styles.card + " " + styles.cardHover}>
+          <a href="middle-east-north-africa" className={styles.card + " " + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇮🇱")}
@@ -495,7 +495,7 @@ export default function Home(props) {
             <p>
               Averages <strong>3.53</strong> overall.
             </p>
-          </div>
+          </a>
           <a href="/north-america" className={styles.card + " " + styles.cardHover}>
             <h1>
               <ReactCountryFlag

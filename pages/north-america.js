@@ -17,7 +17,7 @@ export default function Home(props) {
         className={styles.header}
         style={{
           backgroundImage: `linear-gradient(0deg, rgba(100, 75, 37, 0.74), rgba(100, 75, 37, 0.74))
-            ,url("https://media.npr.org/assets/img/2016/06/20/venezuela-june-20-16_wide-288b85ef48230d7e987f81fc7d7a06fc56d53f4b.jpg?s=1400")`,
+            ,url("https://images.pexels.com/photos/4614165/pexels-photo-4614165.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")`,
         }}
       >
         <p className={styles.description}><a href="/" style={{ textDecoration: 'none' }}>The State of Democracy</a></p>
