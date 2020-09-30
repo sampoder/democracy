@@ -121,7 +121,66 @@ export default function Home(props) {
           <div className={styles.cardFull + " " + styles.card}>
             <h1>Score breakdown</h1>
             <p>
-              Best in {Object.keys(props.country.specifics).map(key => [key, props.country.specifics[key]]).sort((a,b) => b[1] - a[1])[0][0].replaceAll('x', ' ')}
+              {props.country.name}'s best attribute is it's{" "}
+              {Object.keys(props.country.specifics)
+                .map((key) => [key, props.country.specifics[key]])
+                .sort((a, b) => b[1] - a[1])[0][0]
+                .replaceAll("x", " ")
+                .toLowerCase()}{" "}
+              which was scored as{" "}
+              {
+                Object.keys(props.country.specifics)
+                  .map((key) => [key, props.country.specifics[key]])
+                  .sort((a, b) => b[1] - a[1])[0][1]
+              }
+              . On the contrary, it's worst attribute is it's{" "}
+              {Object.keys(props.country.specifics)
+                .map((key) => [key, props.country.specifics[key]])
+                .sort((b, a) => b[1] - a[1])[0][0]
+                .replaceAll("x", " ")
+                .toLowerCase()}{" "}
+              in which it scores{" "}
+              {
+                Object.keys(props.country.specifics)
+                  .map((key) => [key, props.country.specifics[key]])
+                  .sort((b, a) => b[1] - a[1])[0][1]
+              }
+              . It also scores{" "}
+              {
+                Object.keys(props.country.specifics)
+                  .map((key) => [key, props.country.specifics[key]])
+                  .sort((a, b) => b[1] - a[1])[1][1]
+              }{" "}
+              in{" "}
+              {Object.keys(props.country.specifics)
+                .map((key) => [key, props.country.specifics[key]])
+                .sort((a, b) => b[1] - a[1])[1][0]
+                .replaceAll("x", " ")
+                .toLowerCase()}{" "}
+              ,{" "}
+              {
+                Object.keys(props.country.specifics)
+                  .map((key) => [key, props.country.specifics[key]])
+                  .sort((a, b) => b[1] - a[1])[2][1]
+              }{" "}
+              in{" "}
+              {Object.keys(props.country.specifics)
+                .map((key) => [key, props.country.specifics[key]])
+                .sort((a, b) => b[1] - a[1])[2][0]
+                .replaceAll("x", " ")
+                .toLowerCase()}{" "}
+              and{" "}
+              {
+                Object.keys(props.country.specifics)
+                  .map((key) => [key, props.country.specifics[key]])
+                  .sort((a, b) => b[1] - a[1])[3][1]
+              }{" "}
+              in{" "}
+              {Object.keys(props.country.specifics)
+                .map((key) => [key, props.country.specifics[key]])
+                .sort((a, b) => b[1] - a[1])[3][0]
+                .replaceAll("x", " ")
+                .toLowerCase()}{" "}
             </p>
           </div>
         </div>
@@ -179,6 +238,10 @@ export const getServerSideProps = async (context) => {
     );
   const country = countries[0];
   console.log(country);
-  console.log(Object.keys(country.specifics).map(key => [key, country.specifics[key]]).sort((a,b) => b[1] - a[1])[0][0]);
+  console.log(
+    Object.keys(country.specifics)
+      .map((key) => [key, country.specifics[key]])
+      .sort((a, b) => b[1] - a[1])[0][0]
+  );
   return { props: { country } };
 };
