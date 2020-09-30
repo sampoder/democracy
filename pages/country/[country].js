@@ -122,65 +122,66 @@ export default function Home(props) {
             <h1>Score breakdown</h1>
             <p>
               {props.country.name}'s best attribute is it's{" "}
-              {Object.keys(props.country.specifics)
-                .map((key) => [key, props.country.specifics[key]])
-                .sort((a, b) => b[1] - a[1])[0][0]
-                .replaceAll("x", " ")
-                .toLowerCase()}{" "}
-              which was scored as{" "}
               {
                 Object.keys(props.country.specifics)
                   .map((key) => [key, props.country.specifics[key]])
-                  .sort((a, b) => b[1] - a[1])[0][1]
+                  .sort((a, b) => b[1][0] - a[1][0])[0][1][1]
+              }{" "}
+              which was scored at{" "}
+              {
+                Object.keys(props.country.specifics)
+                  .map((key) => [key, props.country.specifics[key]])
+                  .sort((a, b) => b[1][0] - a[1][0])[0][1][0]
               }
               . On the contrary, it's worst attribute is it's{" "}
-              {Object.keys(props.country.specifics)
-                .map((key) => [key, props.country.specifics[key]])
-                .sort((b, a) => b[1] - a[1])[0][0]
-                .replaceAll("x", " ")
-                .toLowerCase()}{" "}
+              {
+                Object.keys(props.country.specifics)
+                  .map((key) => [key, props.country.specifics[key]])
+                  .sort((b, a) => b[1][0] - a[1][0])[0][1][1]
+              }{" "}
               in which it scores{" "}
               {
                 Object.keys(props.country.specifics)
                   .map((key) => [key, props.country.specifics[key]])
-                  .sort((b, a) => b[1] - a[1])[0][1]
-              }
-              . It also scores{" "}
+                  .sort((b, a) => b[1][0] - a[1][0])[0][1][0]
+              }{" "}
+              (out of 10). It also scores{" "}
               {
                 Object.keys(props.country.specifics)
                   .map((key) => [key, props.country.specifics[key]])
-                  .sort((a, b) => b[1] - a[1])[1][1]
+                  .sort((a, b) => b[1][0] - a[1][0])[1][1][0]
               }{" "}
               in{" "}
-              {Object.keys(props.country.specifics)
-                .map((key) => [key, props.country.specifics[key]])
-                .sort((a, b) => b[1] - a[1])[1][0]
-                .replaceAll("x", " ")
-                .toLowerCase()}{" "}
+              {
+                Object.keys(props.country.specifics)
+                  .map((key) => [key, props.country.specifics[key]])
+                  .sort((a, b) => b[1][0] - a[1][0])[1][1][1]
+              }
               ,{" "}
               {
                 Object.keys(props.country.specifics)
                   .map((key) => [key, props.country.specifics[key]])
-                  .sort((a, b) => b[1] - a[1])[2][1]
+                  .sort((a, b) => b[1][0] - a[1][0])[2][1][0]
               }{" "}
               in{" "}
-              {Object.keys(props.country.specifics)
-                .map((key) => [key, props.country.specifics[key]])
-                .sort((a, b) => b[1] - a[1])[2][0]
-                .replaceAll("x", " ")
-                .toLowerCase()}{" "}
+              {
+                Object.keys(props.country.specifics)
+                  .map((key) => [key, props.country.specifics[key]])
+                  .sort((a, b) => b[1][0] - a[1][0])[2][1][1]
+              }{" "}
               and{" "}
               {
                 Object.keys(props.country.specifics)
                   .map((key) => [key, props.country.specifics[key]])
-                  .sort((a, b) => b[1] - a[1])[3][1]
+                  .sort((a, b) => b[1][0] - a[1][0])[3][1][0]
               }{" "}
               in{" "}
-              {Object.keys(props.country.specifics)
-                .map((key) => [key, props.country.specifics[key]])
-                .sort((a, b) => b[1] - a[1])[3][0]
-                .replaceAll("x", " ")
-                .toLowerCase()}{" "}
+              {
+                Object.keys(props.country.specifics)
+                  .map((key) => [key, props.country.specifics[key]])
+                  .sort((a, b) => b[1][0] - a[1][0])[3][1][1]
+              }
+              .
             </p>
           </div>
         </div>
@@ -219,12 +220,20 @@ export const getServerSideProps = async (context) => {
             ? Math.round(fields["Diff"] * 100) / 100
             : (Math.round(fields["Diff"] * 100) / 100) * -1,
         specifics: {
-          electoralxProcessxAndxPluralism:
+          electoralxProcessxAndxPluralism: [
             fields["Electoral process and pluralism"],
-          functioningxOfxGovernment: fields["Functioning of government"],
-          politicalxParticipation: fields["Political participation"],
-          politicalxCulture: fields["Political culture"],
-          civilxLiberties: fields["Civil liberties"],
+            "electoral process and pluralism",
+          ],
+          functioningxOfxGovernment: [
+            fields["Functioning of government"],
+            "government functionality",
+          ],
+          politicalxParticipation: [
+            fields["Political participation"],
+            "political participation",
+          ],
+          politicalxCulture: [fields["Political culture"], "political culture"],
+          civilxLiberties: [fields["Civil liberties"], "civil liberties"],
         },
       }))
     )

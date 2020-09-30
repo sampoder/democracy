@@ -40,7 +40,7 @@ export default function Home(props) {
           <a href="#data" style={{ textDecoration: "underline" }}>
             jump straight to the data
           </a>
-          .
+          . All scores are out of ten, unless otherwise noted.
         </p>
         <div className={styles.grid}>
           <div className={styles.card}>
