@@ -121,7 +121,7 @@ export default function Home(props) {
           <div className={styles.cardFull + " " + styles.card}>
             <h1>Score breakdown</h1>
             <p>
-              {Object.keys(props.country.specifics).map(key => [key, props.country.specifics[key]]).sort((a,b) => b[1] - a[1])[0][0].replaceAll('x', ' ')}
+              Best in {Object.keys(props.country.specifics).map(key => [key, props.country.specifics[key]]).sort((a,b) => b[1] - a[1])[0][0].replaceAll('x', ' ')}
             </p>
           </div>
         </div>
