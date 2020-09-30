@@ -11,7 +11,7 @@ export default function Home(props) {
     <div className={styles.container}>
       <Head>
         <title>The State of Democracy</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="favicon.ico" />
       </Head>
       <article className={styles.header}>
         <p className={styles.description}>The state of</p>
@@ -297,7 +297,7 @@ export default function Home(props) {
         </h1>
         <div className={styles.grid}>
           <a
-            href="/top-thirty"
+            href="/category/top-thirty"
             className={styles.card + " " + styles.cardHover}
           >
             <h1>🗳🗳🗳</h1>
@@ -306,21 +306,21 @@ export default function Home(props) {
           </a>
 
           <a
-            href="/lower-thirty"
+            href="/category/lower-thirty"
             className={styles.card + " " + styles.cardHover}
           >
             <h1>🙅🏻‍♀️🙅🏽‍♀️🙅🏿‍♀️</h1>
             <h1>Bottom 30</h1>
             <p>Still have a long way to go.</p>
           </a>
-          <a href="/all" className={styles.card + " " + styles.cardHover}>
+          <a href="/category/all" className={styles.card + " " + styles.cardHover}>
             <h1>🌏🌎🌍</h1>
             <h1>Every country</h1>
             <p>
               <i>(Not including microstates)</i>
             </p>
           </a>
-          <a href="/asia-pacific" className={styles.card + " " + styles.cardHover}>
+          <a href="/category/asia-pacific" className={styles.card + " " + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇳🇿")}
@@ -363,7 +363,7 @@ export default function Home(props) {
               Averages <strong>5.67</strong> overall.
             </p>
           </a>
-          <a href="/eastern-europe" className={styles.card + " " + styles.cardHover}>
+          <a href="/category/eastern-europe" className={styles.card + " " + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇪🇪")}
@@ -408,7 +408,7 @@ export default function Home(props) {
               Averages <strong>5.42</strong> overall.
             </p>
           </a>
-          <a href="/latin-america" className={styles.card + " " + styles.cardHover}>
+          <a href="/category/latin-america" className={styles.card + " " + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇺🇾")}
@@ -496,7 +496,7 @@ export default function Home(props) {
               Averages <strong>3.53</strong> overall.
             </p>
           </a>
-          <a href="/north-america" className={styles.card + " " + styles.cardHover}>
+          <a href="/category/north-america" className={styles.card + " " + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇨🇦")}
@@ -518,7 +518,7 @@ export default function Home(props) {
               Averages <strong>8.59</strong> overall.
             </p>
           </a>
-          <a href="/sub-saharan-africa" className={styles.card + " " + styles.cardHover}>
+          <a href="/category/sub-saharan-africa" className={styles.card + " " + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇲🇺")}
@@ -561,7 +561,7 @@ export default function Home(props) {
               Averages <strong>4.26</strong> overall.
             </p>
           </a>
-          <a href="/western-europe" className={styles.card + " " + styles.cardHover}>
+          <a href="/category/western-europe" className={styles.card + " " + styles.cardHover}>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇳🇴")}
@@ -608,7 +608,7 @@ export default function Home(props) {
 
         <p style={{ maxWidth: "800px", padding: "auto" }}>
           {props.countries.map((country) => (
-            <a href={"#"}>
+            <a href={"/country/"+country.name.toLowerCase()}>
               <button className={styles.countryButton}>
                 <ReactCountryFlag
                   countryCode={country.emoji}

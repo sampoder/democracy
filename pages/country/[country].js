@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import styles from "../../styles/Home.module.css";
 import { orderBy, filter } from "lodash";
 import { flag, code, name, countries } from "country-emoji";
 import ReactCountryFlag from "react-country-flag";
@@ -128,7 +128,7 @@ export const getServerSideProps = async (context) => {
     .then((countries) =>
       filter(
         countries,
-        (country) => country.name.toLowerCase() === context.params.country
+        (country) => country.name.toLowerCase() === context.params.country.toLowerCase()
       )
     );
   const country = countries[0];
