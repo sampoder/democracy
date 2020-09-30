@@ -255,6 +255,10 @@ a {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*
  * react-circular-progressbar styles
  * All of the styles in this file are configurable!

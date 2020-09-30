@@ -88,9 +88,41 @@ export default function Home(props) {
             </h1>
             <h3>Overall democracy score, recorded in 2019.</h3>
           </div>
-          <div className={styles.card}>
-            <h1 className={styles.bigNumber}>5.44</h1>
-            <h3>Global average score, the lowest it's been since 2006</h3>
+          {props.country.diff != 0 ? (
+            <div className={styles.card}>
+              <h1
+                className={styles.bigNumber}
+                style={{
+                  fontSize: "9em",
+                  color: props.country.diffPositive ? "green" : "red",
+                }}
+              >
+                {props.country.diff}
+              </h1>
+              <h3>
+                {props.country.diffPositive ? "Increase" : "Decrease"} in score
+                from when last recorded in 2018.
+              </h3>
+            </div>
+          ) : (
+            <div className={styles.card}>
+              <h2
+                className={styles.bigNumber}
+                style={{
+                  fontSize: "9em",
+                  color: "black",
+                }}
+              >
+                Zero
+              </h2>
+              <h3>change in score from when last recorded in 2018.</h3>
+            </div>
+          )}
+          <div className={styles.cardFull + " " + styles.card}>
+            <h1>Score breakdown</h1>
+            <p>
+              {Object.keys(props.country.specifics).map(key => [key, props.country.specifics[key]]).sort((a,b) => b[1] - a[1])[0][0].replaceAll('x', ' ')}
+            </p>
           </div>
         </div>
       </main>
@@ -122,16 +154,31 @@ export const getServerSideProps = async (context) => {
         colour: fields["Colour"],
         region: fields["Region"],
         type: fields["Regime type"],
+        diffPositive: fields["Diff"] > 0 ? true : false,
+        diff:
+          fields["Diff"] > 0
+            ? Math.round(fields["Diff"] * 100) / 100
+            : (Math.round(fields["Diff"] * 100) / 100) * -1,
+        specifics: {
+          electoralxProcessxAndxPluralism:
+            fields["Electoral process and pluralism"],
+          functioningxOfxGovernment: fields["Functioning of government"],
+          politicalxParticipation: fields["Political participation"],
+          politicalxCulture: fields["Political culture"],
+          civilxLiberties: fields["Civil liberties"],
+        },
       }))
     )
     .then((countries) => orderBy(countries, "score", "desc"))
     .then((countries) =>
       filter(
         countries,
-        (country) => country.name.toLowerCase() === context.params.country.toLowerCase()
+        (country) =>
+          country.name.toLowerCase() === context.params.country.toLowerCase()
       )
     );
   const country = countries[0];
   console.log(country);
+  console.log(Object.keys(country.specifics).map(key => [key, country.specifics[key]]).sort((a,b) => b[1] - a[1])[0][0]);
   return { props: { country } };
 };
