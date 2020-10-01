@@ -144,8 +144,8 @@ export default function Home(props) {
                 Object.keys(props.country.specifics)
                   .map((key) => [key, props.country.specifics[key]])
                   .sort((b, a) => b[1][0] - a[1][0])[0][1][0]
-              }{" "}
-              (out of 10). It also scores{" "}
+              }
+              . It also scores{" "}
               {
                 Object.keys(props.country.specifics)
                   .map((key) => [key, props.country.specifics[key]])
@@ -184,6 +184,20 @@ export default function Home(props) {
               .
             </p>
           </div>
+          <a href={props.country.amnestyInternational} className={styles.card}>
+            <h1>Learn more about {props.country.name}'s human rights.</h1>
+            <p>
+              Amnesty International focuses on educating people about human
+              rights around the world.
+            </p>
+          </a>
+          <a href={'https://en.wikipedia.org/wiki/'+ props.country.name} className={styles.card}>
+            <h1>Learn more about {props.country.name}.</h1>
+            <p>
+              Wikipedia is a great resource for learning about a country in
+              general, you can go down some great rabbit holes as well.
+            </p>
+          </a>
         </div>
       </main>
       <footer className={styles.footer}>
@@ -214,6 +228,7 @@ export const getServerSideProps = async (context) => {
         colour: fields["Colour"],
         region: fields["Region"],
         type: fields["Regime type"],
+        amnestyInternational: fields["Amnesty International"],
         diffPositive: fields["Diff"] > 0 ? true : false,
         diff:
           fields["Diff"] > 0
@@ -246,11 +261,5 @@ export const getServerSideProps = async (context) => {
       )
     );
   const country = countries[0];
-  console.log(country);
-  console.log(
-    Object.keys(country.specifics)
-      .map((key) => [key, country.specifics[key]])
-      .sort((a, b) => b[1] - a[1])[0][0]
-  );
   return { props: { country } };
 };

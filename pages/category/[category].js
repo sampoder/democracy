@@ -34,7 +34,11 @@ export default function Home(props) {
         <main className={styles.main}>
           <div className={styles.grid}>
             {props.countries.map((country) => (
-              <div className={styles.card} style={{ display: "flex" }}>
+              <a
+                href={"/country/" + country.name.toLowerCase()}
+                className={styles.card}
+                style={{ display: "flex" }}
+              >
                 <div style={{ flex: "80%" }}>
                   <h1
                     style={{
@@ -69,18 +73,21 @@ export default function Home(props) {
                     })}
                   />
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </main>
         <footer className={styles.footer}>
+          Created by{" "}
           <a
             href="https://sampoder.com"
             target="_blank"
             rel="noopener noreferrer"
+            style={{marginLeft: '4px', fontWeight: '600'}}
           >
-            Created by <strong style={{ marginLeft: "4px" }}>@sampoder</strong>.
+            @sampoder
           </a>
+          , always <a href="https://github.com/sampoder/democracy" style={{marginLeft: '4px', fontWeight: '600'}}> open source</a>.
         </footer>
       </div>
     );
