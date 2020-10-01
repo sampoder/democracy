@@ -83,19 +83,19 @@ export default function Home(props) {
             <p>
               {props.country.type == "Full democracy"
                 ? `Full democracies are
-              nations where civil liberties and fundamental political freedoms
+              nations or regions where civil liberties and fundamental political freedoms
               are not only respected but also reinforced by a political culture
               conducive to the thriving of democratic principles.`
                 : ""}
               {props.country.type == "Flawed democracy"
-                ? `Flawed democracies are nations 
+                ? `Flawed democracies are nations or regions 
               where elections are fair and free and
               basic civil liberties are honoured but may
               have issues (e.g. media freedom infringement and 
               minor suppression of political opposition and critics).`
                 : ""}
               {props.country.type == "Hybrid regime"
-                ? `Hybrid regimes are nations with 
+                ? `Hybrid regimes are nations or regions with 
               regular electoral frauds, preventing them
               from being fair and free democracies. These
               nations commonly have governments that apply
@@ -104,7 +104,7 @@ export default function Home(props) {
               and pressure placed on the media, anaemic rule of law,`
                 : ""}
               {props.country.type == "Authoritarian regime"
-                ? `Authoritarian regimes are nations where political
+                ? `Authoritarian regimes are nations or regions where political
                 pluralism is nonexistent or severely limited. These
                 nations are often absolute monarchies or dictatorships,
                 may have some conventional institutions of democracy
@@ -236,7 +236,7 @@ export default function Home(props) {
           >
             <h1>Learn more about {props.country.name}.</h1>
             <p>
-              Wikipedia is a great resource for learning about a country in
+              Wikipedia is a great resource for learning about a country or region in
               general, you can go down some great rabbit holes as well.
             </p>
           </a>
