@@ -13,6 +13,42 @@ export default function Home(props) {
         <Head>
           <title>{props.title} - The State of Democracy</title>
           <link rel="icon" href="/favicon.ico" />
+          <title>The State of Democracy</title>
+          <meta property="og:title" content={props.title+" - The State of Democracy"} />
+          <meta name="twitter:title" content={props.title+" - The State of Democracy"} />
+          <meta name="og:url" content="https://state-of-democracy.vercel.app" />
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="The State of Democracy" />
+          <meta
+            name="description"
+            content={`Global democracy is in its most fragile state 
+          since the first edition of the Democracy Index in 2006. 
+          This site looks at the state of democracy around the world.`}
+          />
+          <meta
+            property="og:description"
+            content={`Global democracy is in its most fragile state 
+          since the first edition of the Democracy Index in 2006. 
+          This site looks at the state of democracy around the world.`}
+          />
+          <meta
+            name="twitter:description"
+            content={`Global democracy is in its most fragile state 
+          since the first edition of the Democracy Index in 2006. 
+          This site looks at the state of democracy around the world.`}
+          />
+          <meta
+            property="og:image"
+            content={props.image}
+          />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta
+            name="twitter:image"
+            content={props.image}
+          />
+          <meta name="msapplication-TileColor" content="#644c24" />
+          <meta name="theme-color" content="#644c24" />
+          <link rel="icon" href="favicon.ico" />
         </Head>
         <article
           className={styles.header}
@@ -83,11 +119,19 @@ export default function Home(props) {
             href="https://sampoder.com"
             target="_blank"
             rel="noopener noreferrer"
-            style={{marginLeft: '4px', fontWeight: '600'}}
+            style={{ marginLeft: "4px", fontWeight: "600" }}
           >
             @sampoder
           </a>
-          , always <a href="https://github.com/sampoder/democracy" style={{marginLeft: '4px', fontWeight: '600'}}> open source</a>.
+          , always{" "}
+          <a
+            href="https://github.com/sampoder/democracy"
+            style={{ marginLeft: "4px", fontWeight: "600" }}
+          >
+            {" "}
+            open source
+          </a>
+          .
         </footer>
       </div>
     );

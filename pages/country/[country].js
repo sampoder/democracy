@@ -12,6 +12,45 @@ export default function Home(props) {
       <Head>
         <title>{props.country.name} - The State of Democracy</title>
         <link rel="icon" href="/favicon.ico" />
+
+        <title>{props.country.name} - The State of Democracy</title>
+        <link rel="icon" href="/favicon.ico" />
+        <title>The State of Democracy</title>
+        <meta
+          property="og:title"
+          content={props.country.name + " - The State of Democracy"}
+        />
+        <meta
+          name="twitter:title"
+          content={props.country.name + " - The State of Democracy"}
+        />
+        <meta name="og:url" content="https://state-of-democracy.vercel.app" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="The State of Democracy" />
+        <meta
+          name="description"
+          content={`Global democracy is in its most fragile state 
+          since the first edition of the Democracy Index in 2006. 
+          This site looks at the state of democracy around the world.`}
+        />
+        <meta
+          property="og:description"
+          content={`Global democracy is in its most fragile state 
+          since the first edition of the Democracy Index in 2006. 
+          This site looks at the state of democracy around the world.`}
+        />
+        <meta
+          name="twitter:description"
+          content={`Global democracy is in its most fragile state 
+          since the first edition of the Democracy Index in 2006. 
+          This site looks at the state of democracy around the world.`}
+        />
+        <meta property="og:image" content={`https://flagcdn.com/w1280/${props.country.emoji.toLowerCase()}.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={`https://flagcdn.com/w1280/${props.country.emoji.toLowerCase()}.png`} />
+        <meta name="msapplication-TileColor" content="#644c24" />
+        <meta name="theme-color" content="#644c24" />
+        <link rel="icon" href="favicon.ico" />
       </Head>
       <article
         className={styles.header}
@@ -191,7 +230,10 @@ export default function Home(props) {
               rights around the world.
             </p>
           </a>
-          <a href={'https://en.wikipedia.org/wiki/'+ props.country.name} className={styles.card}>
+          <a
+            href={"https://en.wikipedia.org/wiki/" + props.country.name}
+            className={styles.card}
+          >
             <h1>Learn more about {props.country.name}.</h1>
             <p>
               Wikipedia is a great resource for learning about a country in
@@ -201,17 +243,25 @@ export default function Home(props) {
         </div>
       </main>
       <footer className={styles.footer}>
-          Created by{" "}
-          <a
-            href="https://sampoder.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{marginLeft: '4px', fontWeight: '600'}}
-          >
-            @sampoder
-          </a>
-          , always <a href="https://github.com/sampoder/democracy" style={{marginLeft: '4px', fontWeight: '600'}}> open source</a>.
-        </footer>
+        Created by{" "}
+        <a
+          href="https://sampoder.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ marginLeft: "4px", fontWeight: "600" }}
+        >
+          @sampoder
+        </a>
+        , always{" "}
+        <a
+          href="https://github.com/sampoder/democracy"
+          style={{ marginLeft: "4px", fontWeight: "600" }}
+        >
+          {" "}
+          open source
+        </a>
+        .
+      </footer>
     </div>
   );
 }
