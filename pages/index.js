@@ -11,6 +11,34 @@ export default function Home(props) {
     <div className={styles.container}>
       <Head>
         <title>The State of Democracy</title>
+        <meta property="og:title" content="The State of Democracy" />
+        <meta name="twitter:title" content="The State of Democracy" />
+        <meta name="og:url" content="https://state-of-democracy.vercel.app" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="The State of Democracy" />
+        <meta
+          name="description"
+          content={`Global democracy is in its most fragile state 
+          since the first edition of the Democracy Index in 2006. 
+          This site looks at the state of democracy around the world.`}
+        />
+        <meta
+          property="og:description"
+          content={`Global democracy is in its most fragile state 
+          since the first edition of the Democracy Index in 2006. 
+          This site looks at the state of democracy around the world.`}
+        />
+        <meta
+          name="twitter:description"
+          content={`Global democracy is in its most fragile state 
+          since the first edition of the Democracy Index in 2006. 
+          This site looks at the state of democracy around the world.`}
+        />
+        <meta property="og:image" content="https://cloud-25jgu2x8e.vercel.app/state_of_dem.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://cloud-25jgu2x8e.vercel.app/state_of_dem.png" />
+        <meta name="msapplication-TileColor" content="#644c24" />
+        <meta name="theme-color" content="#644c24" />
         <link rel="icon" href="favicon.ico" />
       </Head>
       <article className={styles.header}>
@@ -313,14 +341,20 @@ export default function Home(props) {
             <h1>Bottom 30</h1>
             <p>Still have a long way to go.</p>
           </a>
-          <a href="/category/all" className={styles.card + " " + styles.cardHover}>
+          <a
+            href="/category/all"
+            className={styles.card + " " + styles.cardHover}
+          >
             <h1>🌏🌎🌍</h1>
             <h1>Every country</h1>
             <p>
               <i>(Not including microstates)</i>
             </p>
           </a>
-          <a href="/category/asia-pacific" className={styles.card + " " + styles.cardHover}>
+          <a
+            href="/category/asia-pacific"
+            className={styles.card + " " + styles.cardHover}
+          >
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇳🇿")}
@@ -363,7 +397,10 @@ export default function Home(props) {
               Averages <strong>5.67</strong> overall.
             </p>
           </a>
-          <a href="/category/eastern-europe" className={styles.card + " " + styles.cardHover}>
+          <a
+            href="/category/eastern-europe"
+            className={styles.card + " " + styles.cardHover}
+          >
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇪🇪")}
@@ -408,7 +445,10 @@ export default function Home(props) {
               Averages <strong>5.42</strong> overall.
             </p>
           </a>
-          <a href="/category/latin-america" className={styles.card + " " + styles.cardHover}>
+          <a
+            href="/category/latin-america"
+            className={styles.card + " " + styles.cardHover}
+          >
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇺🇾")}
@@ -451,7 +491,10 @@ export default function Home(props) {
               Averages <strong>6.13</strong> overall.
             </p>
           </a>
-          <a href="middle-east-north-africa" className={styles.card + " " + styles.cardHover}>
+          <a
+            href="middle-east-north-africa"
+            className={styles.card + " " + styles.cardHover}
+          >
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇮🇱")}
@@ -496,7 +539,10 @@ export default function Home(props) {
               Averages <strong>3.53</strong> overall.
             </p>
           </a>
-          <a href="/category/north-america" className={styles.card + " " + styles.cardHover}>
+          <a
+            href="/category/north-america"
+            className={styles.card + " " + styles.cardHover}
+          >
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇨🇦")}
@@ -518,7 +564,10 @@ export default function Home(props) {
               Averages <strong>8.59</strong> overall.
             </p>
           </a>
-          <a href="/category/sub-saharan-africa" className={styles.card + " " + styles.cardHover}>
+          <a
+            href="/category/sub-saharan-africa"
+            className={styles.card + " " + styles.cardHover}
+          >
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇲🇺")}
@@ -561,7 +610,10 @@ export default function Home(props) {
               Averages <strong>4.26</strong> overall.
             </p>
           </a>
-          <a href="/category/western-europe" className={styles.card + " " + styles.cardHover}>
+          <a
+            href="/category/western-europe"
+            className={styles.card + " " + styles.cardHover}
+          >
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇳🇴")}
@@ -608,7 +660,7 @@ export default function Home(props) {
 
         <p style={{ maxWidth: "800px", padding: "auto" }}>
           {props.countries.map((country) => (
-            <a href={"/country/"+country.name.toLowerCase()}>
+            <a href={"/country/" + country.name.toLowerCase()}>
               <button className={styles.countryButton}>
                 <ReactCountryFlag
                   countryCode={country.emoji}
@@ -622,17 +674,25 @@ export default function Home(props) {
       </main>
 
       <footer className={styles.footer}>
-          Created by{" "}
-          <a
-            href="https://sampoder.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{marginLeft: '4px', fontWeight: '600'}}
-          >
-            @sampoder
-          </a>
-          , always <a href="https://github.com/sampoder/democracy" style={{marginLeft: '4px', fontWeight: '600'}}> open source</a>.
-        </footer>
+        Created by{" "}
+        <a
+          href="https://sampoder.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ marginLeft: "4px", fontWeight: "600" }}
+        >
+          @sampoder
+        </a>
+        , always{" "}
+        <a
+          href="https://github.com/sampoder/democracy"
+          style={{ marginLeft: "4px", fontWeight: "600" }}
+        >
+          {" "}
+          open source
+        </a>
+        .
+      </footer>
     </div>
   );
 }
