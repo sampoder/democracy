@@ -60,7 +60,7 @@ export default function Home(props) {
             22
           </strong>{" "}
           full democracies, <strong>54</strong> authoritarian states and the{" "}
-          <strong>91</strong> nations that find themselves somewhere in between
+          <strong>91</strong> nations and regions that find themselves somewhere in between
           the two.
           <br />
           <br />
