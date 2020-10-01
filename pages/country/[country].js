@@ -29,15 +29,15 @@ export default function Home(props) {
         <meta property="og:site_name" content="The State of Democracy" />
         <meta
           name="description"
-          content={`A look at the status of ${props.country.name}'s democracy, at a time when global democracy is extremely fragile.`}
+          content={`A look at the state of democracy in ${props.country.name}, at a time when global democracy is extremely fragile.`}
         />
         <meta
           property="og:description"
-          content={`A look at the status of ${props.country.name}'s democracy, at a time when global democracy is extremely fragile.`}
+          content={`A look at the state of democracy in ${props.country.name}, at a time when global democracy is extremely fragile.`}
         />
         <meta
           name="twitter:description"
-          content={`A look at the status of ${props.country.name}'s democracy, at a time when global democracy is extremely fragile.`}
+          content={`A look at the state of democracy in ${props.country.name}, at a time when global democracy is extremely fragile.`}
         />
         <meta
           property="og:image"
