@@ -201,14 +201,17 @@ export default function Home(props) {
         </div>
       </main>
       <footer className={styles.footer}>
-        <a
-          href="https://sampoder.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Created by <strong style={{ marginLeft: "4px" }}>@sampoder</strong>.
-        </a>
-      </footer>
+          Created by{" "}
+          <a
+            href="https://sampoder.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{marginLeft: '4px', fontWeight: '600'}}
+          >
+            @sampoder
+          </a>
+          , always <a href="https://github.com/sampoder/democracy" style={{marginLeft: '4px', fontWeight: '600'}}> open source</a>.
+        </footer>
     </div>
   );
 }
