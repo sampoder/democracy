@@ -186,7 +186,7 @@ export async function getStaticPaths() {
       { params: { category: "sub-saharan-africa" } },
       { params: { category: "western-europe" } }
     ],
-    fallback: true or false // See the "fallback" section below
+    fallback: false
   };
 }
 
