@@ -182,7 +182,7 @@ export async function getStaticPaths() {
       { params: { category: "eastern-europe" } },
       { params: { category: "latin-america" } },
       { params: { category: "middle-east-north-africa" } },
-      { params: { category: "middle-east-north-africa" } },
+      { params: { category: "north-america" } },
       { params: { category: "sub-saharan-africa" } },
       { params: { category: "western-europe" } }
     ],
