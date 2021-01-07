@@ -697,7 +697,7 @@ export default function Home(props) {
   );
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const countries = await fetch(
     "http://sampoder-api.herokuapp.com/v0.1/Democracy/Countries"
   )
@@ -711,5 +711,5 @@ export const getServerSideProps = async () => {
     )
     .then((countries) => orderBy(countries, "name"));
   console.log(countries);
-  return { props: { countries } };
+  return { props: { countries }, revalidate: 20 };
 };
