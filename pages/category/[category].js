@@ -172,7 +172,25 @@ export default function Home(props) {
   }
 }
 
-export const getServerSideProps = async (context) => {
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { category: "all" } },
+      { params: { category: "lower-thirty" } },
+      { params: { category: "top-thirty" } },
+      { params: { category: "asia-pacific" } },
+      { params: { category: "eastern-europe" } },
+      { params: { category: "latin-america" } },
+      { params: { category: "middle-east-north-africa" } },
+      { params: { category: "middle-east-north-africa" } },
+      { params: { category: "sub-saharan-africa" } },
+      { params: { category: "western-europe" } }
+    ],
+    fallback: true or false // See the "fallback" section below
+  };
+}
+
+export const getStaticProps = async (context) => {
   if (context.params.category === "all") {
     const countries = await fetch(
       "http://sampoder-api.herokuapp.com/v0.1/Democracy/Countries"
