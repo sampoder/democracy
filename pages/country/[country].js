@@ -236,8 +236,9 @@ export default function Home(props) {
           >
             <h1>Learn more about {props.country.name}.</h1>
             <p>
-              Wikipedia is a great resource for learning about a country or region in
-              general, you can go down some great rabbit holes as well.
+              Wikipedia is a great resource for learning about a country or
+              region in general, you can go down some great rabbit holes as
+              well.
             </p>
           </a>
         </div>
@@ -266,7 +267,56 @@ export default function Home(props) {
   );
 }
 
-export const getServerSideProps = async (context) => {
+export const getStaticPaths = async (context) => {
+  const countries = await fetch(
+    "http://sampoder-api.herokuapp.com/v0.1/Democracy/Countries"
+  )
+    .then((r) => r.json())
+    .then((countries) =>
+      countries.map(({ id, fields }) => ({
+        id,
+        name: fields["Country"],
+        emoji: code(fields["Emoji"]),
+        score: fields["Overall"],
+        rank: fields["Rank"],
+        colour: fields["Colour"],
+        region: fields["Region"],
+        type: fields["Regime type"],
+        amnestyInternational: fields["Amnesty International"],
+        diffPositive: fields["Diff"] > 0 ? true : false,
+        diff:
+          fields["Diff"] > 0
+            ? Math.round(fields["Diff"] * 100) / 100
+            : (Math.round(fields["Diff"] * 100) / 100) * -1,
+        specifics: {
+          electoralxProcessxAndxPluralism: [
+            fields["Electoral process and pluralism"],
+            "electoral process and pluralism",
+          ],
+          functioningxOfxGovernment: [
+            fields["Functioning of government"],
+            "government functionality",
+          ],
+          politicalxParticipation: [
+            fields["Political participation"],
+            "political participation",
+          ],
+          politicalxCulture: [fields["Political culture"], "political culture"],
+          civilxLiberties: [fields["Civil liberties"], "civil liberties"],
+        },
+      }))
+    )
+    .then((countries) => orderBy(countries, "score", "desc"))
+    .then((countries) =>
+      countries.map((country) => ({
+        params: { country: country.name.toLowerCase() },
+      }))
+    );
+  console.log(countries);
+  return { paths: countries, fallback: false };
+};
+
+export const getStaticProps = async (context) => {
   const countries = await fetch(
     "http://sampoder-api.herokuapp.com/v0.1/Democracy/Countries"
   )
