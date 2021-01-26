@@ -127,7 +127,7 @@
 
 @media (max-width: 600px) {
   .title {
-    font-size: 4rem;
+    font-size: 3.2rem;
   }
   .card{
     flex-basis: 98%;
