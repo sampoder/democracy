@@ -20,19 +20,19 @@ export default function Home(props) {
           name="description"
           content={`Global democracy is in its most fragile state 
           since the first edition of the Democracy Index in 2006. 
-          This site looks at the state of democracy around the world.`}
+          This site looks at the state of democracy around the world in 2021.`}
         />
         <meta
           property="og:description"
           content={`Global democracy is in its most fragile state 
           since the first edition of the Democracy Index in 2006. 
-          This site looks at the state of democracy around the world.`}
+          This site looks at the state of democracy around the world in 2021.`}
         />
         <meta
           name="twitter:description"
           content={`Global democracy is in its most fragile state 
           since the first edition of the Democracy Index in 2006. 
-          This site looks at the state of democracy around the world.`}
+          This site looks at the state of democracy around the world in 2021.`}
         />
         <meta property="og:image" content="https://cloud-25jgu2x8e.vercel.app/state_of_dem.png" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -143,35 +143,14 @@ export default function Home(props) {
           <div className={styles.card}>
             <h1>
               <ReactCountryFlag
-                countryCode={code("🇺🇾")}
+                countryCode={code("🇫🇷")}
                 svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
-                countryCode={code("🇦🇷")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />
-              <ReactCountryFlag
-                countryCode={code("🇧🇷")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />
-              <ReactCountryFlag
-                countryCode={code("🇲🇽")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />
-              <ReactCountryFlag
-                countryCode={code("🇨🇺")}
+                countryCode={code("🇵🇹")}
                 svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
@@ -179,16 +158,12 @@ export default function Home(props) {
               />
             </h1>
             <h1>
-              Latin America continues to{" "}
-              <span className={styles.red}>fall</span>.
+              <span className={styles.red}>Reversing</span> the progress of last year.{" "}
             </h1>
             <p>
-              With restrictions placed on political activity and major fraud
-              around the region it's score continues to drop and is now{" "}
-              <strong>6.13</strong>.
+              Two of the three (France & Portugal) new full democracies from 2020 found themselves returning to flawed democracy status.
             </p>
           </div>
-
           <div className={styles.cardFull + " " + styles.card}>
             <h1>
               The Greatest <span className={styles.red}>Drop:</span>{" "}
