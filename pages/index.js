@@ -187,33 +187,33 @@ export default function Home(props) {
           <div className={styles.card}>
             <h1>
               <ReactCountryFlag
-                countryCode={code("🇨🇱")}
+                countryCode={code("🇯🇵")}
                 svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />{" "}
-              Chile,{" "}
+              Japan,{" "}
             </h1>
             <h1>
               <ReactCountryFlag
-                countryCode={code("🇫🇷")}
+                countryCode={code("🇹🇼")}
                 svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />{" "}
-              France <span className={styles.and}>&</span>
+              Taiwan <span className={styles.and}>&</span>
             </h1>
             <h1>
               <ReactCountryFlag
-                countryCode={code("🇵🇹")}
+                countryCode={code("🇰🇷")}
                 svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />{" "}
-              Portugal
+              South Korea
             </h1>
             <h3>
               were upgraded to{" "}
