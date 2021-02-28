@@ -265,25 +265,24 @@ export default function Home(props) {
             </h1>
             <p>
               All five nations in the Nordic region remain in the top seven and
-              the regional score is <strong>9.46</strong>.
+              the regional score is <strong>9.36</strong>.
             </p>
           </div>
           <div className={styles.cardFull + " " + styles.card}>
             <h1>
               The Largest <span className={styles.green}>Gain:</span>{" "}
               <ReactCountryFlag
-                countryCode={code("🇹🇭")}
+                countryCode={code("🇹🇼")}
                 svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />{" "}
-              Thailand
+              Taiwan
             </h1>
             <p>
-              Thailand moved up from a “hybrid regime” to a “flawed democracy”
-              as it's scored improved by <strong>1.69</strong> thanks to
-              continued progress in the nation.
+              Despite regional pressure, Taiwan ran a very successful election. Their scored was raised 
+              by <strong>1.21</strong> thanks to the nation's continued commitment to democracy.
             </p>
           </div>
         </div>
