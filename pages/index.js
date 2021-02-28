@@ -365,7 +365,7 @@ export default function Home(props) {
             </h1>
             <h1>Asia Pacific</h1>
             <p>
-              Averages <strong>5.67</strong> overall.
+              Averages <strong>5.62</strong> overall.
             </p>
           </a>
           <a
@@ -413,7 +413,7 @@ export default function Home(props) {
               Central <span className={styles.and}>&</span> East Europe
             </h1>
             <p>
-              Averages <strong>5.42</strong> overall.
+              Averages <strong>5.36</strong> overall.
             </p>
           </a>
           <a
@@ -459,7 +459,7 @@ export default function Home(props) {
             </h1>
             <h1>Latin America</h1>
             <p>
-              Averages <strong>6.13</strong> overall.
+              Averages <strong>6.09</strong> overall.
             </p>
           </a>
           <a
@@ -507,7 +507,7 @@ export default function Home(props) {
               Middle East <span className={styles.and}>&</span> North Africa
             </h1>
             <p>
-              Averages <strong>3.53</strong> overall.
+              Averages <strong>3.44</strong> overall.
             </p>
           </a>
           <a
@@ -532,7 +532,7 @@ export default function Home(props) {
             </h1>
             <h1>North America</h1>
             <p>
-              Averages <strong>8.59</strong> overall.
+              Averages <strong>8.58</strong> overall.
             </p>
           </a>
           <a
@@ -578,7 +578,7 @@ export default function Home(props) {
             </h1>
             <h1>Sub-Saharan Africa</h1>
             <p>
-              Averages <strong>4.26</strong> overall.
+              Averages <strong>4.16</strong> overall.
             </p>
           </a>
           <a
@@ -624,7 +624,7 @@ export default function Home(props) {
             </h1>
             <h1>Western Europe</h1>
             <p>
-              Averages <strong>8.35</strong> overall.
+              Averages <strong>8.29</strong> overall.
             </p>
           </a>
         </div>
