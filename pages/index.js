@@ -168,20 +168,19 @@ export default function Home(props) {
             <h1>
               The Greatest <span className={styles.red}>Drop:</span>{" "}
               <ReactCountryFlag
-                countryCode={code("🇨🇳")}
+                countryCode={code("🇲🇱")}
                 svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />{" "}
-              China (PRC)
+              Mali
             </h1>
             <p>
-              With growing surveillance of the population and increased
-              discrimination against minorities led to China's score dropping by{" "}
-              <strong>1.06</strong> and further cemented their status as an
-              authoritarian regime. This is despite progress made by it's
-              neighbors.
+              Mali faced a military coup, attacks from jihadist 
+              insurgents and lost control of large amounts of it's land.
+              This lead to their score dropping by <strong>0.99</strong> and 
+              being reclassified as an “authoritarian regime”.
             </p>
           </div>
           <div className={styles.card}>
