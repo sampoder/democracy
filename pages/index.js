@@ -52,15 +52,15 @@ export default function Home(props) {
         <p className={styles.intro}>
           In early 2020, the Economist Intelligence Unit produced the 12th
           edition of the Democracy Index. The report concluded that global
-          democracy is in its <strong>most fragile state</strong> since the
-          first edition in 2006.
+          democracy is in its most fragile state since the
+          first edition in 2006. Then, <strong>in 2021 the numbers even worse</strong>.
           <br />
           <br />
           This is the story of freedom (or lack of) in the <strong>
-            22
+            23
           </strong>{" "}
-          full democracies, <strong>54</strong> authoritarian states and the{" "}
-          <strong>91</strong> nations and regions that find themselves somewhere in between
+          full democracies, <strong>57</strong> authoritarian states and the{" "}
+          <strong>87</strong> nations and regions that find themselves somewhere in between
           the two.
           <br />
           <br />
@@ -72,7 +72,7 @@ export default function Home(props) {
         </p>
         <div className={styles.grid}>
           <div className={styles.card}>
-            <h1 className={styles.bigNumber}>5.44</h1>
+            <h1 className={styles.bigNumber}>5.37</h1>
             <h3>Global average score, the lowest it's been since 2006</h3>
           </div>
 
@@ -80,9 +80,9 @@ export default function Home(props) {
             <h1 className={styles.textIcon}>⚖︎</h1>
             <h3 style={{ marginBottom: "10px" }}> Where are we struggling?</h3>
             <p>
-              With only an average score of <strong>4.8</strong>, the world
+              With only an average score of <strong>4.68</strong>, the world
               struggles the most with maintaining functional governments.
-              Furthermore, 8 countries lack any sort of functional government.
+              Furthermore, 10 countries lack any sort of functional government.
             </p>
           </div>
           <div className={styles.cardFull + " " + styles.card}>
@@ -97,35 +97,35 @@ export default function Home(props) {
           <div className={styles.card}>
             <h1>
               <ReactCountryFlag
-                countryCode={code("🇹🇼")}
+                countryCode={code("🇲🇺")}
                 svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
-                countryCode={code("🇯🇵")}
+                countryCode={code("🇳🇦")}
                 svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
-                countryCode={code("🇰🇷")}
+                countryCode={code("🇺🇬")}
                 svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
-                countryCode={code("🇵🇹")}
+                countryCode={code("🇧🇫")}
                 svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
-                countryCode={code("🇫🇷")}
+                countryCode={code("🇨🇩")}
                 svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
@@ -133,12 +133,13 @@ export default function Home(props) {
               />
             </h1>
             <h1>
-              Power shifts from the West to the East.
+              Sub-Saharan Africa <span className={styles.red}>reverses</span>{" "}
+              progress.
             </h1>
             <p>
-              Whilst Asia still lags behind Europe, power is beginning to shift
-              from the traditional democracies in Europe to the rising democracies
-              of Asia. Asia still finds itself struggling with a set of bad apples, however.
+              With widespread public dissatisfaction, the region's decade of
+              rocky progress was reversed with it's regional score now at{" "}
+              <strong>4.26</strong>.
             </p>
           </div>
           <div className={styles.card}>
