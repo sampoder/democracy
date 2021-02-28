@@ -125,7 +125,7 @@ export default function Home(props) {
             >
               {props.country.score}
             </h1>
-            <h3>Overall democracy score, recorded in 2019.</h3>
+            <h3>Overall democracy score, recorded in 2020.</h3>
           </div>
           {props.country.diff != 0 ? (
             <div className={styles.card}>
@@ -140,7 +140,7 @@ export default function Home(props) {
               </h1>
               <h3>
                 {props.country.diffPositive ? "Increase" : "Decrease"} in score
-                from when last recorded in 2018.
+                from when last recorded in 2019.
               </h3>
             </div>
           ) : (
@@ -154,7 +154,7 @@ export default function Home(props) {
               >
                 Zero
               </h2>
-              <h3>change in score from when last recorded in 2018.</h3>
+              <h3>change in score from when last recorded in 2019.</h3>
             </div>
           )}
           <div className={styles.cardFull + " " + styles.card}>
@@ -364,5 +364,5 @@ export const getStaticProps = async (context) => {
       )
     );
   const country = countries[0];
-  return { props: { country } };
+  return { props: { country }, revalidate: 20 };
 };
