@@ -97,35 +97,35 @@ export default function Home(props) {
           <div className={styles.card}>
             <h1>
               <ReactCountryFlag
-                countryCode={code("🇲🇺")}
+                countryCode={code("🇹🇼")}
                 svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
-                countryCode={code("🇳🇦")}
+                countryCode={code("🇯🇵")}
                 svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
-                countryCode={code("🇺🇬")}
+                countryCode={code("🇰🇷")}
                 svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
-                countryCode={code("🇧🇫")}
+                countryCode={code("🇵🇹")}
                 svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
                 }}
               />
               <ReactCountryFlag
-                countryCode={code("🇨🇩")}
+                countryCode={code("🇫🇷")}
                 svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 style={{
                   marginLeft: "4px",
@@ -133,13 +133,12 @@ export default function Home(props) {
               />
             </h1>
             <h1>
-              Sub-Saharan Africa <span className={styles.red}>reverses</span>{" "}
-              progress.
+              Power shifts from the West to the East.
             </h1>
             <p>
-              With widespread public dissatisfaction, the region's decade of
-              rocky progress was reversed with it's regional score now at{" "}
-              <strong>4.26</strong>.
+              Whilst Asia still lags behind Europe, power is beginning to shift
+              from the traditional democracies in Europe to the rising democracies
+              of Asia. Asia still finds itself struggling with a set of bad apples, however.
             </p>
           </div>
           <div className={styles.card}>
