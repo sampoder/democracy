@@ -53,7 +53,7 @@ export default function Home(props) {
           In early 2020, the Economist Intelligence Unit produced the 12th
           edition of the Democracy Index. The report concluded that global
           democracy is in its most fragile state since the
-          first edition in 2006. Then, <strong>in 2021 the numbers even worse</strong>.
+          first edition in 2006. Then, <strong>in 2021 the numbers became even worse</strong>.
           <br />
           <br />
           This is the story of freedom (or lack of) in the <strong>
