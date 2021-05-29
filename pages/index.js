@@ -464,7 +464,7 @@ export default function Home(props) {
             </p>
           </a>
           <a
-            href="middle-east-north-africa"
+            href="/category/middle-east-north-africa"
             className={styles.card + " " + styles.cardHover}
           >
             <h1>
