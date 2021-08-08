@@ -300,33 +300,40 @@ export default function Home(props) {
             href="/category/top-thirty"
             className={styles.card + " " + styles.cardHover}
           >
+            <>
             <h1>🗳🗳🗳</h1>
             <h1>Top 30</h1>
             <p>Leading the way towards freedom.</p>
+            </>
           </Link>
 
           <Link
             href="/category/lower-thirty"
             className={styles.card + " " + styles.cardHover}
           >
+            <>
             <h1>🙅🏻‍♀️🙅🏽‍♀️🙅🏿‍♀️</h1>
             <h1>Bottom 30</h1>
             <p>Still have a long way to go.</p>
+            </>
           </Link>
           <Link
             href="/category/all"
             className={styles.card + " " + styles.cardHover}
           >
+            <>
             <h1>🌏🌎🌍</h1>
             <h1>Every country</h1>
             <p>
               <i>(Not including microstates)</i>
             </p>
+            </>
           </Link>
           <Link
             href="/category/asia-pacific"
             className={styles.card + " " + styles.cardHover}
           >
+            <>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇳🇿")}
@@ -368,11 +375,13 @@ export default function Home(props) {
             <p>
               Averages <strong>5.62</strong> overall.
             </p>
+            </>
           </Link>
           <Link
             href="/category/eastern-europe"
             className={styles.card + " " + styles.cardHover}
           >
+            <>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇪🇪")}
@@ -416,11 +425,13 @@ export default function Home(props) {
             <p>
               Averages <strong>5.36</strong> overall.
             </p>
+            </>
           </Link>
           <Link
             href="/category/latin-america"
             className={styles.card + " " + styles.cardHover}
           >
+            <>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇺🇾")}
@@ -462,11 +473,13 @@ export default function Home(props) {
             <p>
               Averages <strong>6.09</strong> overall.
             </p>
+            </>
           </Link>
           <Link
             href="/category/middle-east-north-africa"
             className={styles.card + " " + styles.cardHover}
           >
+            <>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇮🇱")}
@@ -510,11 +523,13 @@ export default function Home(props) {
             <p>
               Averages <strong>3.44</strong> overall.
             </p>
+            </>
           </Link>
           <Link
             href="/category/north-america"
             className={styles.card + " " + styles.cardHover}
           >
+            <>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇨🇦")}
@@ -535,11 +550,13 @@ export default function Home(props) {
             <p>
               Averages <strong>8.58</strong> overall.
             </p>
+            </>
           </Link>
           <Link
             href="/category/sub-saharan-africa"
             className={styles.card + " " + styles.cardHover}
           >
+            <>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇲🇺")}
@@ -581,11 +598,13 @@ export default function Home(props) {
             <p>
               Averages <strong>4.16</strong> overall.
             </p>
+            </>
           </Link>
           <Link
             href="/category/western-europe"
             className={styles.card + " " + styles.cardHover}
           >
+            <>
             <h1>
               <ReactCountryFlag
                 countryCode={code("🇳🇴")}
@@ -627,7 +646,9 @@ export default function Home(props) {
             <p>
               Averages <strong>8.29</strong> overall.
             </p>
+            </>
           </Link>
+          
         </div>
 
         <p style={{ maxWidth: "800px", padding: "auto" }}>
