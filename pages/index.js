@@ -535,8 +535,8 @@ export default function Home(props) {
             <p>
               Averages <strong>8.58</strong> overall.
             </p>
-          </a>
-          <a
+          </Link>
+          <Link
             href="/category/sub-saharan-africa"
             className={styles.card + " " + styles.cardHover}
           >
