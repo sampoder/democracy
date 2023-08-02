@@ -3,6 +3,7 @@ import styles from "../../styles/Home.module.css";
 import { orderBy, filter } from "lodash";
 import { flag, code, name, countries } from "country-emoji";
 import ReactCountryFlag from "react-country-flag";
+import { data } from "../../lib/data/2022.js";
 import * as rdd from "react-device-detect";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 
@@ -268,101 +269,81 @@ export default function Home(props) {
 }
 
 export const getStaticPaths = async (context) => {
-  const countries = await fetch(
-    "http://sampoder-api.herokuapp.com/v0.1/Democracy/Countries"
-  )
-    .then((r) => r.json())
-    .then((countries) =>
-      countries.map(({ id, fields }) => ({
-        id,
-        name: fields["Country"],
-        emoji: code(fields["Emoji"]),
-        score: fields["Overall"],
-        rank: fields["Rank"],
-        colour: fields["Colour"],
-        region: fields["Region"],
-        type: fields["Regime type"],
-        amnestyInternational: fields["Amnesty International"],
-        diffPositive: fields["Diff"] > 0 ? true : false,
-        diff:
-          fields["Diff"] > 0
-            ? Math.round(fields["Diff"] * 100) / 100
-            : (Math.round(fields["Diff"] * 100) / 100) * -1,
-        specifics: {
-          electoralxProcessxAndxPluralism: [
-            fields["Electoral process and pluralism"],
-            "electoral process and pluralism",
-          ],
-          functioningxOfxGovernment: [
-            fields["Functioning of government"],
-            "government functionality",
-          ],
-          politicalxParticipation: [
-            fields["Political participation"],
-            "political participation",
-          ],
-          politicalxCulture: [fields["Political culture"], "political culture"],
-          civilxLiberties: [fields["Civil liberties"], "civil liberties"],
-        },
-      }))
-    )
-    .then((countries) => orderBy(countries, "score", "desc"))
-    .then((countries) =>
-      countries.map((country) => ({
-        params: { country: country.name.toLowerCase() },
-      }))
-    );
-  console.log(countries);
+  let countries = data.map((fields) => ({
+    name: fields["Country"],
+    emoji: code(fields["Emoji"]),
+    score: fields["Overall"],
+    rank: fields["Rank"],
+    colour: fields["Colour"],
+    region: fields["Region"],
+    type: fields["Regime type"],
+    amnestyInternational: fields["Amnesty International"],
+    diffPositive: fields["Diff"] > 0 ? true : false,
+    diff:
+      fields["Diff"] > 0
+        ? Math.round(fields["Diff"] * 100) / 100
+        : (Math.round(fields["Diff"] * 100) / 100) * -1,
+    specifics: {
+      electoralxProcessxAndxPluralism: [
+        fields["Electoral process and pluralism"],
+        "electoral process and pluralism",
+      ],
+      functioningxOfxGovernment: [
+        fields["Functioning of government"],
+        "government functionality",
+      ],
+      politicalxParticipation: [
+        fields["Political participation"],
+        "political participation",
+      ],
+      politicalxCulture: [fields["Political culture"], "political culture"],
+      civilxLiberties: [fields["Civil liberties"], "civil liberties"],
+    },
+  }));
+  countries = countries.map((country) => ({
+    params: { country: country.name.toLowerCase() },
+  }));
   return { paths: countries, fallback: false };
 };
 
 export const getStaticProps = async (context) => {
-  const countries = await fetch(
-    "http://sampoder-api.herokuapp.com/v0.1/Democracy/Countries"
-  )
-    .then((r) => r.json())
-    .then((countries) =>
-      countries.map(({ id, fields }) => ({
-        id,
-        name: fields["Country"],
-        emoji: code(fields["Emoji"]),
-        score: fields["Overall"],
-        rank: fields["Rank"],
-        colour: fields["Colour"],
-        region: fields["Region"],
-        type: fields["Regime type"],
-        amnestyInternational: fields["Amnesty International"],
-        diffPositive: fields["Diff"] > 0 ? true : false,
-        diff:
-          fields["Diff"] > 0
-            ? Math.round(fields["Diff"] * 100) / 100
-            : (Math.round(fields["Diff"] * 100) / 100) * -1,
-        specifics: {
-          electoralxProcessxAndxPluralism: [
-            fields["Electoral process and pluralism"],
-            "electoral process and pluralism",
-          ],
-          functioningxOfxGovernment: [
-            fields["Functioning of government"],
-            "government functionality",
-          ],
-          politicalxParticipation: [
-            fields["Political participation"],
-            "political participation",
-          ],
-          politicalxCulture: [fields["Political culture"], "political culture"],
-          civilxLiberties: [fields["Civil liberties"], "civil liberties"],
-        },
-      }))
-    )
-    .then((countries) => orderBy(countries, "score", "desc"))
-    .then((countries) =>
-      filter(
-        countries,
-        (country) =>
-          country.name.toLowerCase() === context.params.country.toLowerCase()
-      )
-    );
+  const countries = data.map((fields) => ({
+    name: fields["Country"],
+    emoji: code(fields["Emoji"]),
+    score: fields["Overall"],
+    rank: fields["Rank"],
+    colour: fields["Colour"],
+    region: fields["Region"],
+    type: fields["Regime type"],
+    amnestyInternational: fields["Amnesty International"],
+    diffPositive: fields["Diff"] > 0 ? true : false,
+    diff:
+      fields["Diff"] > 0
+        ? Math.round(fields["Diff"] * 100) / 100
+        : (Math.round(fields["Diff"] * 100) / 100) * -1,
+    specifics: {
+      electoralxProcessxAndxPluralism: [
+        fields["Electoral process and pluralism"],
+        "electoral process and pluralism",
+      ],
+      functioningxOfxGovernment: [
+        fields["Functioning of government"],
+        "government functionality",
+      ],
+      politicalxParticipation: [
+        fields["Political participation"],
+        "political participation",
+      ],
+      politicalxCulture: [fields["Political culture"], "political culture"],
+      civilxLiberties: [fields["Civil liberties"], "civil liberties"],
+    },
+  }));
+
+  countries = filter(
+    orderBy(countries, "score", "desc"),
+    (country) =>
+      country.name.toLowerCase() === context.params.country.toLowerCase(),
+  );
   const country = countries[0];
   return { props: { country }, revalidate: 20 };
 };
