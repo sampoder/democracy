@@ -269,7 +269,7 @@ export default function Home(props) {
 }
 
 export const getStaticPaths = async (context) => {
-  let countries = data.map((fields) => ({
+  let countriesData = data.map((fields) => ({
     name: fields["Country"],
     emoji: code(fields["Emoji"]),
     score: fields["Overall"],
@@ -300,14 +300,14 @@ export const getStaticPaths = async (context) => {
       civilxLiberties: [fields["Civil liberties"], "civil liberties"],
     },
   }));
-  countries = countries.map((country) => ({
+  countriesData = countriesData.map((country) => ({
     params: { country: country.name.toLowerCase() },
   }));
-  return { paths: countries, fallback: false };
+  return { paths: countriesData, fallback: false };
 };
 
 export const getStaticProps = async (context) => {
-  const countries = data.map((fields) => ({
+  let countriesData = data.map((fields) => ({
     name: fields["Country"],
     emoji: code(fields["Emoji"]),
     score: fields["Overall"],
@@ -339,11 +339,11 @@ export const getStaticProps = async (context) => {
     },
   }));
 
-  countries = filter(
-    orderBy(countries, "score", "desc"),
+  countriesData = filter(
+    orderBy(countriesData, "score", "desc"),
     (country) =>
       country.name.toLowerCase() === context.params.country.toLowerCase(),
   );
-  const country = countries[0];
+  const country = countriesData[0];
   return { props: { country }, revalidate: 20 };
 };
