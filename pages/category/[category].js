@@ -72,7 +72,7 @@ export default function Home(props) {
           <div className={styles.grid}>
             {props.countries.map((country) => (
               <a
-                href={"/country/" + country.name.toLowerCase()}
+                href={"/country/" + country.name.toLowerCase().replaceAll(" ", '_')}
                 className={styles.card}
                 style={{ display: "flex" }}
               >
@@ -261,7 +261,7 @@ export const getStaticProps = async (context) => {
     countries = orderBy(countries, "score", "desc");
     countries = filter(
       countries,
-      (country) => country.Region === "Asia & Australasia",
+      (country) => country.region === "Asia & Australasia",
     );
     const title = "Asia Pacific";
     const image =

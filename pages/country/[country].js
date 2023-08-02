@@ -301,7 +301,9 @@ export const getStaticPaths = async (context) => {
     },
   }));
   countriesData = countriesData.map((country) => ({
-    params: { country: country.name.toLowerCase() },
+    params: { 
+      country: country.name.toLowerCase().replaceAll(" ", '_') 
+    },
   }));
   return { paths: countriesData, fallback: false };
 };
@@ -342,7 +344,7 @@ export const getStaticProps = async (context) => {
   countriesData = filter(
     orderBy(countriesData, "score", "desc"),
     (country) =>
-      country.name.toLowerCase() === context.params.country.toLowerCase(),
+      country.name.toLowerCase().replaceAll(" ", '_') === context.params.country.toLowerCase(),
   );
   const country = countriesData[0];
   return { props: { country }, revalidate: 20 };

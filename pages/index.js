@@ -54,27 +54,23 @@ export default function Home() {
           In early 2020, the Economist Intelligence Unit produced the 12th
           edition of the Democracy Index. The report concluded that global
           democracy is in its most fragile state since the
-          first edition in 2006. Then, <strong>in 2021 the numbers 
+          first edition in 2006. Then, <strong>in 2021 & 2022 the numbers 
           became even worse</strong>.
           <br />
           <br />
           This is the story of freedom (or lack of) in the <strong>
-            23
+            24
           </strong>{" "}
-          full democracies, <strong>57</strong> authoritarian states and the{" "}
-          <strong>87</strong> nations and regions that find themselves somewhere in between
+          full democracies, <strong>59</strong> authoritarian states and the{" "}
+          <strong>84</strong> nations and regions that find themselves somewhere in between
           the two.
           <br />
           <br />
-          Read on for a summary, or{" "}
-          <a href="#data" style={{ textDecoration: "underline" }}>
-            jump straight to the data
-          </a>
-          . All scores are out of ten, unless otherwise noted.
+          All scores are out of ten, unless otherwise noted.
         </p>
         <div className={styles.grid}>
           <div className={styles.card}>
-            <h1 className={styles.bigNumber}>5.37</h1>
+            <h1 className={styles.bigNumber}>5.29</h1>
             <h3>Global average score, the lowest it's been since 2006</h3>
           </div>
 
@@ -82,7 +78,7 @@ export default function Home() {
             <h1 className={styles.textIcon}>⚖︎</h1>
             <h3 style={{ marginBottom: "10px" }}> Where are we struggling?</h3>
             <p>
-              With only an average score of <strong>4.68</strong>, the world
+              With only an average score of <strong>4.70</strong>, the world
               struggles the most with maintaining functional governments.
               Furthermore, 10 countries lack any sort of functional government.
             </p>
@@ -96,206 +92,7 @@ export default function Home() {
             </h1>
             <p>UN Secretary-General António Guterres, October 2019</p>
           </div>
-          <div className={styles.card}>
-            <h1>
-              <ReactCountryFlag
-                countryCode={code("🇲🇱")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />
-              <ReactCountryFlag
-                countryCode={code("🇹🇬")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />
-              <ReactCountryFlag
-                countryCode={code("🇺🇬")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />
-              <ReactCountryFlag
-                countryCode={code("🇧🇫")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />
-              <ReactCountryFlag
-                countryCode={code("🇨🇩")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />
-            </h1>
-            <h1>
-              Sub-Saharan Africa continues to <span className={styles.red}>fall</span>{" "}.
-            </h1>
-            <p>
-              After years of rocky progress, the past two years have seen that progress reversed with it's regional score now at{" "}
-              <strong>4.16</strong>.
-            </p>
-          </div>
-          <div className={styles.card}>
-            <h1>
-              <ReactCountryFlag
-                countryCode={code("🇫🇷")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />
-              <ReactCountryFlag
-                countryCode={code("🇵🇹")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />
-            </h1>
-            <h1>
-              <span className={styles.red}>Reversing</span> the progress of last year.{" "}
-            </h1>
-            <p>
-              Two of the three (France & Portugal) new full democracies from 2020 found themselves returning to flawed democracy status.
-            </p>
-          </div>
-          <div className={styles.cardFull + " " + styles.card}>
-            <h1>
-              The Greatest <span className={styles.red}>Drop:</span>{" "}
-              <ReactCountryFlag
-                countryCode={code("🇲🇱")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />{" "}
-              Mali
-            </h1>
-            <p>
-              Mali faced a military coup, attacks from jihadist 
-              insurgents and lost control of large amounts of it's land.
-              This lead to their score dropping by <strong>0.99</strong> and 
-              being reclassified as an “authoritarian regime”.
-            </p>
-          </div>
-          <div className={styles.card}>
-            <h1>
-              <ReactCountryFlag
-                countryCode={code("🇯🇵")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />{" "}
-              Japan,{" "}
-            </h1>
-            <h1>
-              <ReactCountryFlag
-                countryCode={code("🇹🇼")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />{" "}
-              Taiwan <span className={styles.and}>&</span>
-            </h1>
-            <h1>
-              <ReactCountryFlag
-                countryCode={code("🇰🇷")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />{" "}
-              South Korea
-            </h1>
-            <h3>
-              were upgraded to{" "}
-              <span className={styles.green}>full democracies</span>.
-            </h3>
-          </div>
-
-          <div className={styles.card}>
-            <h1>
-              <ReactCountryFlag
-                countryCode={code("🇳🇴")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />
-              <ReactCountryFlag
-                countryCode={code("🇮🇸")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />
-              <ReactCountryFlag
-                countryCode={code("🇸🇪")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />
-              <ReactCountryFlag
-                countryCode={code("🇫🇮")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />
-              <ReactCountryFlag
-                countryCode={code("🇩🇰")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />
-            </h1>
-            <h1>
-              Nordic nations continue{" "}
-              <span className={styles.green}>leading</span>.
-            </h1>
-            <p>
-              All five nations in the Nordic region remain in the top seven and
-              the regional score is <strong>9.36</strong>.
-            </p>
-          </div>
-          <div className={styles.cardFull + " " + styles.card}>
-            <h1>
-              The Largest <span className={styles.green}>Gain:</span>{" "}
-              <ReactCountryFlag
-                countryCode={code("🇹🇼")}
-                svg={rdd.isMacOs + rdd.isIOS13 < 1}
-                style={{
-                  marginLeft: "4px",
-                }}
-              />{" "}
-              Taiwan
-            </h1>
-            <p>
-              Despite regional pressure, Taiwan ran a very successful election. Their scored was raised 
-              by <strong>1.21</strong> thanks to the nation's continued commitment to democracy.
-            </p>
-          </div>
         </div>
-
-        <h1
-          style={{ textAlign: "center", width: "100%", fontSize: "3em" }}
-          id="data"
-        >
-          <span className={styles.titleUnderline} style={{ padding: "10px" }}>
-            Explore the data
-          </span>
-        </h1>
         <div className={styles.grid}>
           <Link
             href="/category/top-thirty"
@@ -654,10 +451,13 @@ export default function Home() {
 
         <p style={{ maxWidth: "800px", padding: "auto" }}>
           {data.map((country) => (
-            <Link href={"/country/" + country.Country.toLowerCase()}>
+            <Link href={
+              "/country/" + 
+              country.Country.toLowerCase().replaceAll(" ", '_')
+            }>
               <button className={styles.countryButton}>
                 <ReactCountryFlag
-                  countryCode={country.Emoji}
+                  countryCode={code(country.Emoji)}
                   svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 />{" "}
                 {country.Country}
