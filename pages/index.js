@@ -654,13 +654,13 @@ export default function Home() {
 
         <p style={{ maxWidth: "800px", padding: "auto" }}>
           {data.map((country) => (
-            <Link href={"/country/" + country.name.toLowerCase()}>
+            <Link href={"/country/" + country.Country.toLowerCase()}>
               <button className={styles.countryButton}>
                 <ReactCountryFlag
-                  countryCode={country.emoji}
+                  countryCode={country.Emoji}
                   svg={rdd.isMacOs + rdd.isIOS13 < 1}
                 />{" "}
-                {country.name}
+                {country.Country}
               </button>
             </Link>
           ))}
