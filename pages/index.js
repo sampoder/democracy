@@ -35,9 +35,9 @@ export default function Home() {
           since the first edition of the Democracy Index in 2006. 
           This site looks at the state of democracy around the world in 2021.`}
         />
-        <meta property="og:image" content="https://cloud-pd4qfjibh-hack-club-bot.vercel.app/0screenshot_2021-02-28_at_8.59.17_pm.png" />
+        <meta property="og:image" content="https://cloud-qh19uwe09-hack-club-bot.vercel.app/0group_1.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://cloud-pd4qfjibh-hack-club-bot.vercel.app/0screenshot_2021-02-28_at_8.59.17_pm.png" />
+        <meta name="twitter:image" content="https://cloud-qh19uwe09-hack-club-bot.vercel.app/0group_1.png" />
         <meta name="msapplication-TileColor" content="#644c24" />
         <meta name="theme-color" content="#644c24" />
         <link rel="icon" href="favicon.ico" />
