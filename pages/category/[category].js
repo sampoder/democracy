@@ -199,6 +199,7 @@ export const getStaticProps = async (context) => {
       score: fields["Overall"],
       rank: fields["Rank"],
       colour: fields["Colour"],
+      region: fields["Region"]
     }));
     countries = orderBy(countries, "score", "desc");
     const title = "All Nations";
@@ -212,6 +213,7 @@ export const getStaticProps = async (context) => {
       score: fields["Overall"],
       rank: fields["Rank"],
       colour: fields["Colour"],
+      region: fields["Region"]
     }));
     countries = orderBy(countries, "score").slice(0, 30);
     countries = orderBy(countries, "score", "desc");
@@ -226,6 +228,7 @@ export const getStaticProps = async (context) => {
       score: fields["Overall"],
       rank: fields["Rank"],
       colour: fields["Colour"],
+      region: fields["Region"]
     }));
     countries = orderBy(countries, "score", "desc").slice(0, 30);
     const title = "Top 30 Nations";
@@ -239,6 +242,7 @@ export const getStaticProps = async (context) => {
       score: fields["Overall"],
       rank: fields["Rank"],
       colour: fields["Colour"],
+      region: fields["Region"]
     }));
     countries = orderBy(countries, "score", "desc").slice(0, 30);
     const title = "Top 30 Nations";
@@ -252,11 +256,12 @@ export const getStaticProps = async (context) => {
       score: fields["Overall"],
       rank: fields["Rank"],
       colour: fields["Colour"],
+      region: fields["Region"]
     }));
     countries = orderBy(countries, "score", "desc");
     countries = filter(
       countries,
-      (country) => country.region === "Asia & Australasia",
+      (country) => country.Region === "Asia & Australasia",
     );
     const title = "Asia Pacific";
     const image =
@@ -269,6 +274,8 @@ export const getStaticProps = async (context) => {
       score: fields["Overall"],
       rank: fields["Rank"],
       colour: fields["Colour"],
+      region: fields["Region"]
+      
     }));
     countries = orderBy(countries, "score", "desc");
     countries = filter(
@@ -286,6 +293,7 @@ export const getStaticProps = async (context) => {
       score: fields["Overall"],
       rank: fields["Rank"],
       colour: fields["Colour"],
+      region: fields["Region"]
     }));
     countries = orderBy(countries, "score", "desc");
     countries = filter(
@@ -303,6 +311,7 @@ export const getStaticProps = async (context) => {
       score: fields["Overall"],
       rank: fields["Rank"],
       colour: fields["Colour"],
+      region: fields["Region"]
     }));
     countries = orderBy(countries, "score", "desc");
     countries = filter(
@@ -320,6 +329,7 @@ export const getStaticProps = async (context) => {
       score: fields["Overall"],
       rank: fields["Rank"],
       colour: fields["Colour"],
+      region: fields["Region"]
     }));
     countries = orderBy(countries, "score", "desc");
     countries = filter(
@@ -337,6 +347,7 @@ export const getStaticProps = async (context) => {
       score: fields["Overall"],
       rank: fields["Rank"],
       colour: fields["Colour"],
+      region: fields["Region"]
     }));
     countries = orderBy(countries, "score", "desc");
     countries = filter(
@@ -354,6 +365,7 @@ export const getStaticProps = async (context) => {
       score: fields["Overall"],
       rank: fields["Rank"],
       colour: fields["Colour"],
+      region: fields["Region"]
     }));
     countries = orderBy(countries, "score", "desc");
     countries = filter(
