@@ -193,166 +193,173 @@ export async function getStaticPaths() {
 
 export const getStaticProps = async (context) => {
   if (context.params.category === "all") {
-    let countries = data
-      .map((fields) => ({
-        name: fields["Country"],
-        emoji: code(fields["Emoji"]),
-        score: fields["Overall"],
-        rank: fields["Rank"],
-        colour: fields["Colour"],
-      }))
+    let countries = data.map((fields) => ({
+      name: fields["Country"],
+      emoji: code(fields["Emoji"]),
+      score: fields["Overall"],
+      rank: fields["Rank"],
+      colour: fields["Colour"],
+    }));
     countries = orderBy(countries, "score", "desc");
     const title = "All Nations";
     const image =
       "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80";
     return { props: { countries, image, title } };
   } else if (context.params.category === "lower-thirty") {
-    let countries = data
-      .map((fields) => ({
-        name: fields["Country"],
-        emoji: code(fields["Emoji"]),
-        score: fields["Overall"],
-        rank: fields["Rank"],
-        colour: fields["Colour"],
-      }))
-    countries = orderBy(countries, "score").slice(0, 30)
-    countries = orderBy(countries, "score", "desc")
+    let countries = data.map((fields) => ({
+      name: fields["Country"],
+      emoji: code(fields["Emoji"]),
+      score: fields["Overall"],
+      rank: fields["Rank"],
+      colour: fields["Colour"],
+    }));
+    countries = orderBy(countries, "score").slice(0, 30);
+    countries = orderBy(countries, "score", "desc");
     const title = "Lowest 30 Nations";
     const image =
       "https://static01.nyt.com/images/2019/05/01/world/01venezuela5-sub/01venezuela5-sub-facebookJumbo-v2.jpg";
     return { props: { countries, image, title } };
   } else if (context.params.category === "top-thirty") {
-    let countries = data
-      .map((fields) => ({
-        name: fields["Country"],
-        emoji: code(fields["Emoji"]),
-        score: fields["Overall"],
-        rank: fields["Rank"],
-        colour: fields["Colour"],
-      }))
-    countries = orderBy(countries, "score", "desc").slice(0, 30)
+    let countries = data.map((fields) => ({
+      name: fields["Country"],
+      emoji: code(fields["Emoji"]),
+      score: fields["Overall"],
+      rank: fields["Rank"],
+      colour: fields["Colour"],
+    }));
+    countries = orderBy(countries, "score", "desc").slice(0, 30);
     const title = "Top 30 Nations";
     const image =
       "https://images.unsplash.com/photo-1561057160-ce83b1bd72f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80";
     return { props: { countries, image, title } };
   } else if (context.params.category === "top-thirty") {
-    let countries = data
-      .map((fields) => ({
-        name: fields["Country"],
-        emoji: code(fields["Emoji"]),
-        score: fields["Overall"],
-        rank: fields["Rank"],
-        colour: fields["Colour"],
-      }))
+    let countries = data.map((fields) => ({
+      name: fields["Country"],
+      emoji: code(fields["Emoji"]),
+      score: fields["Overall"],
+      rank: fields["Rank"],
+      colour: fields["Colour"],
+    }));
     countries = orderBy(countries, "score", "desc").slice(0, 30);
     const title = "Top 30 Nations";
     const image =
       "https://images.unsplash.com/photo-1561057160-ce83b1bd72f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80";
     return { props: { countries, image, title } };
   } else if (context.params.category === "asia-pacific") {
-    let countries = data
-      .map((fields) => ({
-        name: fields["Country"],
-        emoji: code(fields["Emoji"]),
-        score: fields["Overall"],
-        rank: fields["Rank"],
-        colour: fields["Colour"],
-      }))
-    countries = orderBy(countries, "score", "desc")
-    countries = filter(countries, (country) => country.region === "Asia & Australasia")
+    let countries = data.map((fields) => ({
+      name: fields["Country"],
+      emoji: code(fields["Emoji"]),
+      score: fields["Overall"],
+      rank: fields["Rank"],
+      colour: fields["Colour"],
+    }));
+    countries = orderBy(countries, "score", "desc");
+    countries = filter(
+      countries,
+      (country) => country.region === "Asia & Australasia",
+    );
     const title = "Asia Pacific";
     const image =
       "https://images.unsplash.com/photo-1560090277-2394465b49b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3150&q=80";
     return { props: { countries, image, title } };
   } else if (context.params.category === "eastern-europe") {
-    let countries = data
-      .map((fields) => ({
-        name: fields["Country"],
-        emoji: code(fields["Emoji"]),
-        score: fields["Overall"],
-        rank: fields["Rank"],
-        colour: fields["Colour"],
-      }))
-    countries = orderBy(countries, "score", "desc")
-    countries = filter(countries, (country) => country.region === "Eastern Europe")
+    let countries = data.map((fields) => ({
+      name: fields["Country"],
+      emoji: code(fields["Emoji"]),
+      score: fields["Overall"],
+      rank: fields["Rank"],
+      colour: fields["Colour"],
+    }));
+    countries = orderBy(countries, "score", "desc");
+    countries = filter(
+      countries,
+      (country) => country.region === "Eastern Europe",
+    );
     const title = "Eastern Europe";
     const image =
       "https://images.pexels.com/photos/5119451/pexels-photo-5119451.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260";
     return { props: { countries, image, title } };
   } else if (context.params.category === "latin-america") {
-    let countries = data
-      .map((fields) => ({
-        name: fields["Country"],
-        emoji: code(fields["Emoji"]),
-        score: fields["Overall"],
-        rank: fields["Rank"],
-        colour: fields["Colour"],
-      }))
-    countries = orderBy(countries, "score", "desc")
-    countries = filter(countries, (country) => country.region === "Latin America")
+    let countries = data.map((fields) => ({
+      name: fields["Country"],
+      emoji: code(fields["Emoji"]),
+      score: fields["Overall"],
+      rank: fields["Rank"],
+      colour: fields["Colour"],
+    }));
+    countries = orderBy(countries, "score", "desc");
+    countries = filter(
+      countries,
+      (country) => country.region === "Latin America",
+    );
     const title = "Latin America";
     const image =
       "https://media.npr.org/assets/img/2016/06/20/venezuela-june-20-16_wide-288b85ef48230d7e987f81fc7d7a06fc56d53f4b.jpg?s=1400";
     return { props: { countries, image, title } };
   } else if (context.params.category === "middle-east-north-africa") {
-    let countries = data
-      .map((fields) => ({
-        name: fields["Country"],
-        emoji: code(fields["Emoji"]),
-        score: fields["Overall"],
-        rank: fields["Rank"],
-        colour: fields["Colour"],
-      }))
-    countries = orderBy(countries, "score", "desc"))
+    let countries = data.map((fields) => ({
+      name: fields["Country"],
+      emoji: code(fields["Emoji"]),
+      score: fields["Overall"],
+      rank: fields["Rank"],
+      colour: fields["Colour"],
+    }));
+    countries = orderBy(countries, "score", "desc");
     countries = filter(
       countries,
       (country) => country.region === "Middle East & North Africa",
-    )
+    );
     const title = "Middle East & North Africa";
     const image =
       "https://upload.wikimedia.org/wikipedia/commons/3/3d/Ghanem_al-Dosari.jpg";
     return { props: { countries, image, title } };
   } else if (context.params.category === "north-america") {
-    let countries = data
-      .map((fields) => ({
-        name: fields["Country"],
-        emoji: code(fields["Emoji"]),
-        score: fields["Overall"],
-        rank: fields["Rank"],
-        colour: fields["Colour"],
-      }))
-    countries = orderBy(countries, "score", "desc"))
-    countries = filter(countries, (country) => country.region === "North America")
+    let countries = data.map((fields) => ({
+      name: fields["Country"],
+      emoji: code(fields["Emoji"]),
+      score: fields["Overall"],
+      rank: fields["Rank"],
+      colour: fields["Colour"],
+    }));
+    countries = orderBy(countries, "score", "desc");
+    countries = filter(
+      countries,
+      (country) => country.region === "North America",
+    );
     const title = "North America";
     const image =
       "https://images.pexels.com/photos/4614165/pexels-photo-4614165.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260";
     return { props: { countries, image, title } };
   } else if (context.params.category === "sub-saharan-africa") {
-    let countries = data
-      .map((fields) => ({
-        name: fields["Country"],
-        emoji: code(fields["Emoji"]),
-        score: fields["Overall"],
-        rank: fields["Rank"],
-        colour: fields["Colour"],
-      }))
-    countries = orderBy(countries, "score", "desc")
-    countries = filter(countries, (country) => country.region === "Sub-Saharan Africa")
+    let countries = data.map((fields) => ({
+      name: fields["Country"],
+      emoji: code(fields["Emoji"]),
+      score: fields["Overall"],
+      rank: fields["Rank"],
+      colour: fields["Colour"],
+    }));
+    countries = orderBy(countries, "score", "desc");
+    countries = filter(
+      countries,
+      (country) => country.region === "Sub-Saharan Africa",
+    );
     const title = "Sub-Saharan Africa";
     const image =
       "https://goinggreenrecyclingnigeria.org/home/wp-content/uploads/2014/11/kenya_boy_cameraview_in_water_2.jpg";
     return { props: { countries, image, title } };
   } else if (context.params.category === "western-europe") {
-    let countries = data
-      .map((fields) => ({
-        name: fields["Country"],
-        emoji: code(fields["Emoji"]),
-        score: fields["Overall"],
-        rank: fields["Rank"],
-        colour: fields["Colour"],
-      }))
-    countries = orderBy(countries, "score", "desc")
-    countries = filter(countries, (country) => country.region === "Western Europe")
+    let countries = data.map((fields) => ({
+      name: fields["Country"],
+      emoji: code(fields["Emoji"]),
+      score: fields["Overall"],
+      rank: fields["Rank"],
+      colour: fields["Colour"],
+    }));
+    countries = orderBy(countries, "score", "desc");
+    countries = filter(
+      countries,
+      (country) => country.region === "Western Europe",
+    );
     const title = "Western Europe";
     const image =
       "https://images.unsplash.com/photo-1544993570-064eb94847e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80";
