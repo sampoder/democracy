@@ -20,20 +20,17 @@ export default function Home() {
         <meta
           name="description"
           content={`Global democracy is in its most fragile state 
-          since the first edition of the Democracy Index in 2006. 
-          This site looks at the state of democracy around the world in 2021.`}
+          since the first edition of the Democracy Index in 2006. This site looks at the state of democracy around the world in 2022.`}
         />
         <meta
           property="og:description"
           content={`Global democracy is in its most fragile state 
-          since the first edition of the Democracy Index in 2006. 
-          This site looks at the state of democracy around the world in 2021.`}
+          since the first edition of the Democracy Index in 2006. This site looks at the state of democracy around the world in 2022.`}
         />
         <meta
           name="twitter:description"
           content={`Global democracy is in its most fragile state 
-          since the first edition of the Democracy Index in 2006. 
-          This site looks at the state of democracy around the world in 2021.`}
+          since the first edition of the Democracy Index in 2006. This site looks at the state of democracy around the world in 2022.`}
         />
         <meta property="og:image" content="https://cloud-qh19uwe09-hack-club-bot.vercel.app/0group_1.png" />
         <meta name="twitter:card" content="summary_large_image" />
