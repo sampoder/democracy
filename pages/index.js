@@ -1,12 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
+import { data } from "../lib/data/2022.js";
 import { orderBy } from "lodash";
 import { flag, code, name, countries } from "country-emoji";
 import ReactCountryFlag from "react-country-flag";
 import * as rdd from "react-device-detect";
 
-export default function Home(props) {
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
@@ -652,7 +653,7 @@ export default function Home(props) {
         </div>
 
         <p style={{ maxWidth: "800px", padding: "auto" }}>
-          {props.countries.map((country) => (
+          {data.map((country) => (
             <Link href={"/country/" + country.name.toLowerCase()}>
               <button className={styles.countryButton}>
                 <ReactCountryFlag
@@ -690,19 +691,3 @@ export default function Home(props) {
   );
 }
 
-export const getStaticProps = async () => {
-  const countries = await fetch(
-    "http://sampoder-api.herokuapp.com/v0.1/Democracy/Countries"
-  )
-    .then((r) => r.json())
-    .then((countries) =>
-      countries.map(({ id, fields }) => ({
-        id,
-        name: fields["Country"],
-        emoji: code(fields["Emoji"]),
-      }))
-    )
-    .then((countries) => orderBy(countries, "name"));
-  console.log(countries);
-  return { props: { countries }, revalidate: 20 };
-};
